@@ -2,11 +2,14 @@
 
 {% block title %}UFC Champions - Fighters{% endblock %}
 
+{% block hero_image %}
+  
+{% endblock %}
+
 {% block content %}
     <div class="row">
         <h2 class="center-align">Search for Champions</h2>
         <form class="col s12" method="POST" action="{{ url_for('fighters') }}">
-            {{ csrf_token() }}
             <div class="row">
                 <div class="input-field col s12">
                     <label for="weight_class">Select Weight Class:</label>
@@ -14,7 +17,7 @@
                         <option value="all">All</option>
                         <option value="lightweight">Lightweight</option>
                         <option value="middleweight">Middleweight</option>
-                        <!-- Add more weight classes as needed -->
+                      
                     </select>
                 </div>
             </div>
