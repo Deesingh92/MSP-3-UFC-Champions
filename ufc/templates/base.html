@@ -14,16 +14,21 @@
 <body>
     <nav>
         <div class="nav-wrapper black">
-            <a href="#" class="brand-logo center">UFC Champions 2018-2023</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <!-- Add any navigation links if needed -->
+            <a href="#" class="brand-logo center">UFC Champions</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">Fighters</a></li>
+                <li><a href="collapsible.html">Sign In</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
         <div class="container">
-            {% block content %}{% endblock %}
+            <h1>Welcome to UFC Champions</h1>
+            <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
+            <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
+            <a href="#" class="waves-effect waves-light btn cta-button">Get Started</a>
         </div>
     </main>
 
@@ -35,10 +40,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            M.AutoInit();
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
