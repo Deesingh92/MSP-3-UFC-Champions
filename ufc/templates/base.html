@@ -16,8 +16,8 @@
         <div class="nav-wrapper black">
             <a href="#" class="brand-logo center">UFC Champions</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="sass.html">Home</a></li>
-                <li><a href="badges.html">Fighters</a></li>
+                   <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
                 <li><a href="collapsible.html">Sign In</a></li>
             </ul>
         </div>
@@ -25,7 +25,7 @@
 
     <main>
         <div class="container">
-            <h1>Welcome to UFC Champions</h1>
+            <h2>Welcome to UFC Champions 2018 - 2023</h1>
             <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
             <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
             <a href="#" class="waves-effect waves-light btn cta-button">Get Started</a>
@@ -34,7 +34,7 @@
 
     <footer class="page-footer black">
         <div class="container">
-            <!-- Add footer content if needed -->
+            <p>&copy; 2023 UFC Champions. All rights reserved.</p>
         </div>
     </footer>
 

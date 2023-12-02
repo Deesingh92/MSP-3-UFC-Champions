@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}UFC Champions - Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome to UFC Champions</h2>
+    <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
+    <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">View Fighters</a>
+{% endblock %}

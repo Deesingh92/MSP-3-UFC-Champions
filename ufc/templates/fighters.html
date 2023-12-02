@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}UFC Champions - Fighters{% endblock %}
+
+{% block content %}
+    <h2>Search for Champions</h2>
+
+    <form method="GET" action="{{ url_for('search_champions') }}">
+        <label for="weight_class">Select Weight Class:</label>
+        <select name="weight_class" id="weight_class">
+            <option value="all">All</option>
+            <option value="lightweight">Lightweight</option>
+            <option value="middleweight">Middleweight</option>
+            <!-- Add more weight classes as needed -->
+
+        </select>
+
+        <button type="submit">Search</button>
+    </form>
+
+    {% if champions %}
+        <h3>Search Results</h3>
+        <ul>
+            {% for champion in champions %}
+                <li>{{ champion.name }} - {{ champion.weight_class }} Champion</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
