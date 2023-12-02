@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #423e3e; /* Black background */
+    color: #ffd700; /* Gold text color */
+}
+
+nav {
+    background-color: #000000; /* Black navbar */
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background-color: #000000; /* Black footer */
+    color: #ffd700; /* Gold text color */
+}
+
+a {
+    color: #ffd700 !important; /* Gold links */
+}
+
+a:hover {
+    color: #ffa500 !important; /* Orange on hover */
+}
+
+.brand-logo {
+    font-family: 'Tektur', sans-serif;
+    font-size: 2rem;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.center-align {
+    text-align: center;
+}
