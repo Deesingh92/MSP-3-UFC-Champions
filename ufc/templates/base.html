@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Tektur&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper black">
-            <a href="#" class="brand-logo center">UFC Champions</a>
+            <a href="{{ url_for('home') }}" class="brand-logo center">UFC Champions</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                   <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
                 <li><a href="collapsible.html">Sign In</a></li>
+            </ul>
+
+
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
             </ul>
         </div>
     </nav>
@@ -26,9 +37,9 @@
     <main>
         <div class="container">
             <h2>Welcome to UFC Champions 2018 - 2023</h1>
-            <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
-            <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
-            <a href="#" class="waves-effect waves-light btn cta-button">Get Started</a>
+                <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
+                <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
+                <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
         </div>
     </main>
 
@@ -42,4 +53,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>

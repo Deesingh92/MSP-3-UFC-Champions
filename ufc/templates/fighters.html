@@ -3,27 +3,42 @@
 {% block title %}UFC Champions - Fighters{% endblock %}
 
 {% block content %}
-    <h2>Search for Champions</h2>
+    <div class="row">
+        <h2 class="center-align">Search for Champions</h2>
+        <form class="col s12" method="POST" action="{{ url_for('fighters') }}">
+            {{ csrf_token() }}
+            <div class="row">
+                <div class="input-field col s12">
+                    <label for="weight_class">Select Weight Class:</label>
+                    <select id="weight_class" name="weight_class">
+                        <option value="all">All</option>
+                        <option value="lightweight">Lightweight</option>
+                        <option value="middleweight">Middleweight</option>
+                        <!-- Add more weight classes as needed -->
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <button class="btn waves-effect waves-light" type="submit">Search
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </div>
+        </form>
 
-    <form method="GET" action="{{ url_for('search_champions') }}">
-        <label for="weight_class">Select Weight Class:</label>
-        <select name="weight_class" id="weight_class">
-            <option value="all">All</option>
-            <option value="lightweight">Lightweight</option>
-            <option value="middleweight">Middleweight</option>
-            <!-- Add more weight classes as needed -->
-
-        </select>
-
-        <button type="submit">Search</button>
-    </form>
-
-    {% if champions %}
-        <h3>Search Results</h3>
-        <ul>
-            {% for champion in champions %}
-                <li>{{ champion.name }} - {{ champion.weight_class }} Champion</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+        {% if champions %}
+            <div class="row">
+                <h3 class="center-align">Search Results</h3>
+                <ul class="collection">
+                    {% for champion in champions %}
+                        <li class="collection-item">
+                            <span class="title">{{ champion.name }}</span>
+                            <p>{{ champion.weight_class }} Champion</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
 {% endblock %}

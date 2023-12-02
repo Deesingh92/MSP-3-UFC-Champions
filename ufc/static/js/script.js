@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    M.AutoInit();
-    console.log('Script loaded successfully!');
-    
-});
+    let sidenav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenav);
+  });
