@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}UFC Champions 2018 - 2023{% endblock %}</title>
+    <title>{% block title %}UFC Champions 2022 - 2023{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +35,9 @@
     <main class="container">
         {% block hero_image %}
             <div class="container">
-                <h2>Welcome to UFC Champions 2018 - 2023</h2>
+                <h2>Welcome to UFC Champions 2022 - 2023</h2>
                 <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
-                <p>Explore the list of champions in various weight classes from 2018 to 2023.</p>
+                <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
                 <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
             </div>
         {% endblock %}
