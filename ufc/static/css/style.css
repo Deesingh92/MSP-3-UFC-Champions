@@ -49,6 +49,26 @@ a:hover {
     margin-bottom: 20px; /* Adjust spacing as needed */
 }
 
+.dark-card {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a subtle lift */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+
+  .dark-card:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+
+  .dark-card .card-title {
+    font-size: 1.5em; /* Larger font size for the title */
+  }
+
+  .dark-card p {
+    margin-bottom: 8px; /* Adjust spacing between paragraphs */
+  }
+  
 /* Responsive styling for smaller screens */
 @media (max-width: 600px) {
     .main-image {

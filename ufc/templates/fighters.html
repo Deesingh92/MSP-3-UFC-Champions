@@ -3,7 +3,7 @@
 {% block title %}UFC Champions - Fighters{% endblock %}
 
 {% block hero_image %}
-
+    <!-- Your hero image or content goes here -->
 {% endblock %}
 
 {% block content %}
@@ -40,10 +40,13 @@
                 <h3 class="center-align">Search Results</h3>
                 {% for champion in champions %}
                     <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-content">
+                        <div class="card dark-card"> <!-- Add dark-card class here -->
+                            <div class="card-content"> <!-- Add white-text class to make text visible on dark background -->
                                 <span class="card-title">{{ champion.name }}</span>
-                                <p>{{ champion.weight_class }} Champion</p>
+                                <p>Weight Class: {{ champion.weight_class }}</p>
+                                <p>Country: {{ champion.country }}</p>
+                                <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
+                                <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
                             </div>
                         </div>
                     </div>
