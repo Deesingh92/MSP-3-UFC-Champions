@@ -68,6 +68,11 @@ a:hover {
   .dark-card p {
     margin-bottom: 8px; /* Adjust spacing between paragraphs */
   }
+
+  .gold_button {
+    background-color: gold;
+    color: black
+}
   
 /* Responsive styling for smaller screens */
 @media (max-width: 600px) {

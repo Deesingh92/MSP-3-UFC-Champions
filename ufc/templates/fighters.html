@@ -11,19 +11,39 @@
         <h2 class="center-align">Search for Champions</h2>
         <form class="col s12" method="POST" action="{{ url_for('fighters') }}">
             <div class="row">
-                <div class="input-field col s12">
-                    <label for="weight_class">Select Weight Class:</label>
-                    <select id="weight_class" name="weight_class">
-                        <option value="all">All</option>
-                        <option value="Flyweight">Flyweight</option> 
-                        <option value="Bantamweight">Bantamweight</option>
-                        <option value="Featherweight">Featherweight</option>
-                        <option value="Lightweight">Lightweight</option>
-                        <option value="Welterweight">Welterweight</option>
-                        <option value="Middleweight">Middleweight</option>
-                        <option value="Light Heavyweight">Light Heavyweight</option>
-                        <option value="Heavyweight">Heavyweight</option>
-                    </select>
+                <div class="col s12">
+                    <label>Select Weight Class:</label>
+                    <div class="row">
+                        <div class="col s2">
+                            <button id="btn-all" class="btn waves-effect waves-light" type="button">All</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-flyweight" class="btn waves-effect waves-light" type="button">Flyweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-bantamweight" class="btn waves-effect waves-light" type="button">Bantamweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-featherweight" class="btn waves-effect waves-light" type="button">Featherweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-lightweight" class="btn waves-effect waves-light" type="button">Lightweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-welterweight" class="btn waves-effect waves-light" type="button">Welterweight</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2">
+                            <button id="btn-middleweight" class="btn waves-effect waves-light" type="button">Middleweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-light-heavyweight" class="btn waves-effect waves-light" type="button">Light Heavyweight</button>
+                        </div>
+                        <div class="col s2">
+                            <button id="btn-heavyweight" class="btn waves-effect waves-light" type="button">Heavyweight</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -36,14 +56,14 @@
         </form>
 
         {% if champions %}
-            <div class="row">
+            <div class="row" id="champions-container">
                 <h3 class="center-align">Search Results</h3>
                 {% for champion in champions %}
                     <div class="col s12 m6 l4">
-                        <div class="card dark-card"> <!-- Add dark-card class here -->
-                            <div class="card-content"> <!-- Add white-text class to make text visible on dark background -->
+                        <div class="card dark-card">
+                            <div class="card-content">
                                 <span class="card-title">{{ champion.name }}</span>
-                                <p>Weight Class: {{ champion.weight_class }}</p>
+                                <p class="weight-class">{{ champion.weight_class }}</p>
                                 <p>Country: {{ champion.country }}</p>
                                 <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
                                 <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
@@ -52,8 +72,16 @@
                     </div>
                 {% endfor %}
             </div>
+
+            <div class="row">
+                <div class="col s2">
+                    <a class="waves-effect waves-light btn gold" href="javascript:void(0);" onclick="resetFilters()">Reset Filters</a>
+                </div>
+            </div>
         {% else %}
             <p>No champions found.</p>
         {% endif %}
     </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
