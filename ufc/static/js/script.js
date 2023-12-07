@@ -78,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
       filterChampions('Heavyweight');
   });
 
+  document.getElementById('reset-filters-btn').addEventListener('click', function () {
+    resetFilters();
+});
+
   document.getElementById('searchForm').addEventListener('submit', function (event) {
       event.preventDefault(); // Prevent the default form submission behavior
 
