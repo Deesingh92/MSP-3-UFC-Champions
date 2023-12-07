@@ -14,7 +14,6 @@ champions = [
     Champion(name="Alex Pantoja", country="Brazil", weight_class="Flyweight", start_date=datetime(2023, 11, 14), end_date=datetime.now(), image_url=None),
 ]
 
-
 @app.route("/")
 def home():
     return render_template("base.html")
@@ -23,16 +22,26 @@ def home():
 def fighters():
     if request.method == 'POST':
         weight_class = request.form.get('weight_class')
-        if weight_class == 'all':
-            champions_filtered = champions
-        else:
-            champions_filtered = [champion for champion in champions if champion.weight_class == weight_class]
+        champions_filtered = [champion for champion in champions if weight_class == 'all' or champion.weight_class == weight_class]
 
         return render_template('fighters.html', champions=champions_filtered)
 
-   
     for champion in champions:
-        champion.image_url = url_for('static', filename='images/jon-jones.jpeg')
-        print(champion.image_url)
+        champion.image_url = url_for('static', filename=f'images/{champion.name.lower().replace(" ", "-")}.jpeg')
 
     return render_template('fighters.html', champions=champions)
+
+@app.route('/signin', methods=['GET', 'POST'])
+def signin():
+    if request.method == 'POST':
+        # Simulate a simple user for demonstration purposes
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if username == 'demo' and password == 'password':
+            session['user'] = username
+            return redirect(url_for('home'))
+
+        return render_template('signin.html', error='Invalid credentials')
+
+    return render_template('signin.html', error=None)
