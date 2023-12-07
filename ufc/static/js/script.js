@@ -1,64 +1,87 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Materialize CSS side navigation
   let sidenavElements = document.querySelectorAll('.sidenav');
   M.Sidenav.init(sidenavElements);
 
   function resetFilters() {
-    var championsContainer = document.getElementById('champions-container');
-    var championItems = championsContainer.querySelectorAll('.col');
+      var championsContainer = document.getElementById('champions-container');
+      var championItems = championsContainer.querySelectorAll('.col');
 
-    championItems.forEach(function (item) {
-      item.style.display = 'block';
-    });
+      championItems.forEach(function (item) {
+          item.style.display = 'block';
+      });
   }
 
   function filterChampions(weightClass) {
-    var championsContainer = document.getElementById('champions-container');
-    var championItems = championsContainer.querySelectorAll('.col');
+      var championsContainer = document.getElementById('champions-container');
+      var championItems = championsContainer.querySelectorAll('.col');
 
-    championItems.forEach(function (item) {
-      var championWeightClass = item.querySelector('.weight-class').textContent.toLowerCase();
+      championItems.forEach(function (item) {
+          var championWeightClass = item.querySelector('.weight-class').textContent.toLowerCase();
 
-      if (weightClass === 'all' || championWeightClass === weightClass.toLowerCase()) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
+          if (weightClass === 'all' || championWeightClass === weightClass.toLowerCase()) {
+              item.style.display = 'block';
+          } else {
+              item.style.display = 'none';
+          }
+      });
+  }
+
+  function filterChampionsByName(name) {
+      var championsContainer = document.getElementById('champions-container');
+      var championItems = championsContainer.querySelectorAll('.col');
+
+      championItems.forEach(function (item) {
+          var championName = item.querySelector('.card-title').textContent.toLowerCase();
+
+          if (championName.includes(name.toLowerCase())) {
+              item.style.display = 'block';
+          } else {
+              item.style.display = 'none';
+          }
+      });
   }
 
   document.getElementById('btn-all').addEventListener('click', function () {
-    filterChampions('all');
+      resetFilters();
   });
 
   document.getElementById('btn-flyweight').addEventListener('click', function () {
-    filterChampions('Flyweight');
+      filterChampions('Flyweight');
   });
 
   document.getElementById('btn-bantamweight').addEventListener('click', function () {
-    filterChampions('Bantamweight');
+      filterChampions('Bantamweight');
   });
 
   document.getElementById('btn-featherweight').addEventListener('click', function () {
-    filterChampions('Featherweight');
+      filterChampions('Featherweight');
   });
 
   document.getElementById('btn-lightweight').addEventListener('click', function () {
-    filterChampions('Lightweight');
+      filterChampions('Lightweight');
   });
 
   document.getElementById('btn-welterweight').addEventListener('click', function () {
-    filterChampions('Welterweight');
+      filterChampions('Welterweight');
   });
 
   document.getElementById('btn-middleweight').addEventListener('click', function () {
-    filterChampions('Middleweight');
+      filterChampions('Middleweight');
   });
 
   document.getElementById('btn-light-heavyweight').addEventListener('click', function () {
-    filterChampions('Light Heavyweight');
+      filterChampions('Light Heavyweight');
   });
 
   document.getElementById('btn-heavyweight').addEventListener('click', function () {
-    filterChampions('Heavyweight');
+      filterChampions('Heavyweight');
+  });
+
+  document.getElementById('searchForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      var searchName = document.getElementById('searchName').value;
+      filterChampionsByName(searchName);
   });
 });

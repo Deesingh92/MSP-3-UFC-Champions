@@ -3,13 +3,13 @@
 {% block title %}UFC Champions - Fighters{% endblock %}
 
 {% block hero_image %}
-    <!-- Your hero image or content goes here -->
+  
 {% endblock %}
 
 {% block content %}
     <div class="row">
         <h2 class="center-align">Search for Champions</h2>
-        <form class="col s12" method="POST" action="{{ url_for('fighters') }}">
+        <form id="searchForm" class="col s12" method="POST" action="{{ url_for('fighters') }}">
             <div class="row">
                 <div class="col s12">
                     <label>Select Weight Class:</label>
@@ -48,6 +48,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
+                    <input id="searchName" type="text" name="searchName" placeholder="Enter Champion Name">
                     <button class="btn waves-effect waves-light" type="submit">Search
                         <i class="material-icons right">search</i>
                     </button>
@@ -75,7 +76,7 @@
 
             <div class="row">
                 <div class="col s2">
-                    <a class="waves-effect waves-light btn gold" href="javascript:void(0);" onclick="resetFilters()">Reset Filters</a>
+                    <a id="reset-filters-btn" class="waves-effect waves-light btn red" href="javascript:void(0);" onclick="resetFilters()">Reset Filters</a>
                 </div>
             </div>
         {% else %}
