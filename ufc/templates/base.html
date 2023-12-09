@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}UFC Champions 2022 - 2023{% endblock %}</title>
+
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Tektur&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <div class="nav-wrapper black">
             <a href="{{ url_for('home') }}" class="brand-logo center">UFC Champions</a>
@@ -24,33 +29,62 @@
                 <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             </ul>
 
-
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
-                <li><a href="collapsible.html">Sign In</a></li>
+                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Main Content -->
     <main class="container">
+        <!-- Hero Section -->
         {% block hero_image %}
             <div class="container">
-                <h2>Welcome to UFC Champions 2022 - 2023</h2>
-                <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="">
+                <h1>Welcome to UFC Champions 2022 - 2023</h1>
+                <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
                 <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
                 <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
             </div>
         {% endblock %}
 
+        <!-- Additional Content Section -->
         {% block content %}
+            <div class="row">
+                <h2 class="center-align">Latest Champions</h2>
+                {% for champion in champions %}
+                    <div class="col s12 m6 l4">
+                        <div class="card dark-card">
+                            <div class="card-image">
+                                {% if champion.image_url %}
+                                    <img src="{{ champion.image_url }}" alt="{{ champion.name }}">
+                                {% else %}
+                                    <img src="{{ url_for('static', filename='images/default_placeholder.jpg') }}" alt="Default Image">
+                                {% endif %}
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">{{ champion.name }}</span>
+                                <p class="weight-class">{{ champion.weight_class }}</p>
+                                <p>Country: {{ champion.country }}</p>
+                                <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
+                                <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         {% endblock %}
     </main>
+
+    <!-- Footer Section -->
     <footer class="page-footer black">
         <div class="container">
             <p>&copy; 2023 UFC Champions. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- External Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

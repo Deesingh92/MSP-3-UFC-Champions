@@ -12,6 +12,7 @@ class Champion(db.Model):
     weight_class = db.Column(db.String)
     start_date = db.Column(db.DateTime)
     end_date = db.Column(db.DateTime)
+    image_url = db.Column(db.String)
 
     def __init__(self, name, country, weight_class, start_date, end_date, image_url):
         self.name = name
