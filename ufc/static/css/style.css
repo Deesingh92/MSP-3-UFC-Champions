@@ -131,7 +131,18 @@ a:hover {
     margin-top: 5px;
 }
 
-/* Additional styles based on your design preferences */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px; /* Set a maximum height for the card images */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the entire height of the card image container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease-in-out;
+}
 
 
 /* Responsive styling for smaller screens */
