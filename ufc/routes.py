@@ -22,35 +22,92 @@ def home():
 def fighters():
     if request.method == 'POST':
         weight_class = request.form.get('weight_class')
-        champions_filtered = [champion for champion in champions if weight_class == 'all' or champion.weight_class == weight_class]
+        champions_filtered = Champion.query.filter_by(weight_class=weight_class).all() if weight_class != 'all' else Champion.query.all()
 
         return render_template('fighters.html', champions=champions_filtered)
 
-    for champion in champions:
-        champion.image_url = url_for('static', filename=f'images/{champion.name.lower().replace(" ", "-")}.jpeg')
-
+    champions = Champion.query.all()
     return render_template('fighters.html', champions=champions)
+
 
 @app.route("/add_champion", methods=["GET", "POST"])
 def add_champion():
     if request.method == "POST":
-        champion = Champion(name=request.form.get("champion_name"))
-        db.session.add(champion)
+        name = request.form.get("champion_name")
+        
+        # Assuming other form fields are present, and you retrieve them similarly
+        
+        new_champion = Champion(
+            name=name,
+            country="",  # Add other form fields here
+            weight_class="",
+            start_date=datetime.now(),
+            end_date=datetime.now(),
+            image_url=""
+        )
+        
+        db.session.add(new_champion)
+        db.session.commit()
+        
+        # Now the new_champion object should have a valid id
+        return redirect(url_for("fighters"))
+    
+    return render_template("add_champion.html")
+
+@app.route("/edit_champion/<int:champion_id>", methods=["GET", "POST"])
+def edit_champion(champion_id):
+    champion = Champion.query.get(champion_id)
+
+    if not champion:
+        return render_template("404.html"), 404
+
+    if request.method == "POST":
+        # Update champion details
+        champion.name = request.form.get("name")
+        champion.country = request.form.get("country")
+        champion.weight_class = request.form.get("weight_class")
+        champion.start_date = datetime.strptime(request.form.get("start_date"), "%Y-%m-%d")
+        champion.end_date = datetime.strptime(request.form.get("end_date"), "%Y-%m-%d")
+        champion.image_url = url_for('static', filename=f'images/{champion.name.lower().replace(" ", "-")}.jpeg')
+
         db.session.commit()
         return redirect(url_for("fighters"))
-    return render_template("add_champion.html")
+
+    return render_template("edit_champion.html", champion=champion)
+# Delete Champion route - Delete an existing champion
+
+@app.route("/delete_champion/<int:champion_id>", methods=["POST"])
+def delete_champion(champion_id):
+    # Find the champion with the given ID
+    champion = next((c for c in champions if c.id == champion_id), None)
+
+    if not champion:
+        return render_template("404.html"), 404
+
+    # Remove the champion from the list (replace this with actual database deletion)
+    champions.remove(champion)
+
+    return redirect(url_for("fighters"))
+
+# 404 Error route
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'POST':
-        # Simulate a simple user for demonstration purposes
         username = request.form.get('username')
         password = request.form.get('password')
 
+        # Simulate a simple user for demonstration purposes
         if username == 'demo' and password == 'password':
             session['user'] = username
             return redirect(url_for('home'))
 
-        return render_template('signin.html', error='Invalid credentials' , champions=champions)
+        return render_template('signin.html', error='Invalid credentials')
 
     return render_template('signin.html', error=None)
+
+if __name__ == '__main__':
+    app.run(debug=True)

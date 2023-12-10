@@ -6,13 +6,14 @@ db = SQLAlchemy()
 class Champion(db.Model):
     __tablename__ = 'champions'
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(255))
     country = db.Column(db.String)
     weight_class = db.Column(db.String)
     start_date = db.Column(db.DateTime)
     end_date = db.Column(db.DateTime)
     image_url = db.Column(db.String)
+    
 
     def __init__(self, name, country, weight_class, start_date, end_date, image_url):
         self.name = name

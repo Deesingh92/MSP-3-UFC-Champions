@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Champion{% endblock %}
+
+{% block content %}
+<h2 class="center-align">Edit Champion</h2>
+<form method="POST" action="{{ url_for('edit_champion', champion_id=champion.id) }}">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ champion.name }}" required>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" value="{{ champion.country }}" required>
+
+    <label for="weight_class">Weight Class:</label>
+    <input type="text" id="weight_class" name="weight_class" value="{{ champion.weight_class }}" required>
+
+    <label for="start_date">Start Date:</label>
+    <input type="date" id="start_date" name="start_date" value="{{ champion.start_date.strftime('%Y-%m-%d') }}" required>
+
+    <label for="end_date">End Date:</label>
+    <input type="date" id="end_date" name="end_date" value="{{ champion.end_date.strftime('%Y-%m-%d') }}" required>
+
+    <label for="image_url">Image URL:</label>
+    <input type="text" id="image_url" name="image_url" value="{{ champion.image_url }}" required>
+
+    <button type="submit" class="waves-effect waves-light btn">Save Changes</button>
+</form>
+{% endblock %}

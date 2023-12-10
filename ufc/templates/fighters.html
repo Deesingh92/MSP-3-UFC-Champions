@@ -73,6 +73,7 @@
                                 <p>Country: {{ champion.country }}</p>
                                 <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
                                 <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
+                                <a href="{{ url_for('edit_champion', champion_id=champion.id) }}" class="waves-effect waves-light btn">Edit</a>
                             </div>
                         </div>
                     </div>
