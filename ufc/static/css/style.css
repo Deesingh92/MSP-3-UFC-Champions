@@ -26,6 +26,8 @@ footer {
 
 a {
     color: #ffd700 !important;
+    font-family: 'Afacad', sans-serif;
+    font-size: 20px;
     
 }
 
@@ -43,7 +45,7 @@ a:hover {
 }
 
 .brand-logo {
-    font-family: 'Tektur', sans-serif;
+    font-family: 'Rethink Sans', sans-serif;
     font-size: 2rem;
     margin-left: 30px;
     display: flex;
@@ -154,6 +156,7 @@ a:hover {
     font-size: 50px; /* Adjust the font size as needed */
     margin-bottom: 30px; /* Add some space below the heading */
     text-align: center;
+    font-family: 'Kanit', sans-serif;
 }
 
 .hero-section {
@@ -164,15 +167,24 @@ a:hover {
 }
 
 .hero-image {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Set a maximum width to maintain quality */
+    width: 100%;
+    max-width: 1500px;
     height: auto;
     border-radius: 8px;
-    margin-top: 20px; /* Add some space above the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.about {
+    font-family: 'Kanit', sans-serif;
+}
+
+.search-heading {
+    font-family: 'Kanit', sans-serif;
+}
+
+
 .latest-champions {
+    font-family: 'Kanit', sans-serif;
     margin-top: 30px;
 }
 
