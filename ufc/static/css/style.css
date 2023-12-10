@@ -144,8 +144,66 @@ a:hover {
     transition: transform 0.3s ease-in-out;
 }
 
+.latest-champions {
+    margin-top: 30px;
+}
+
+.latest-champions .card {
+    background-color: #333;
+    /* Dark background color */
+    color: #fff;
+    /* Text color */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for a subtle lift */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+    margin-bottom: 20px;
+    /* Adjust spacing as needed */
+}
+
+.latest-champions .card:hover {
+    background-color: #555;
+    /* Darker background color on hover */
+}
+
+.latest-champions .card .card-image {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px; /* Set a maximum height for the card images */
+}
+
+.latest-champions .card .card-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the entire height of the card image container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease-in-out;
+}
+
+.latest-champions .card .card-content {
+    padding: 15px;
+}
+
+.latest-champions .card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.latest-champions .card p {
+    margin-bottom: 8px;
+    /* Adjust spacing between paragraphs */
+}
 
 /* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .latest-champions .card .card-image {
+        max-height: 150px;
+        /* Adjust the maximum height for smaller screens */
+    }
+}
+
+
 @media (max-width: 600px) {
     .main-image {
         max-height: 300px;

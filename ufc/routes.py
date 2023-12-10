@@ -16,7 +16,7 @@ champions = [
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("base.html", champions=champions)
 
 @app.route('/fighters', methods=['GET', 'POST'])
 def fighters():

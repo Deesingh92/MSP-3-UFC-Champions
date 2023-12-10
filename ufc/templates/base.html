@@ -13,8 +13,6 @@
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-
 </head>
 
 <body>
@@ -39,21 +37,36 @@
 
     <!-- Main Content -->
     <main class="container">
+
         <!-- Hero Section -->
         {% block hero_image %}
-            <div class="container">
-                <h1>Welcome to UFC Champions 2022 - 2023</h1>
-                <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
-                <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
-                <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
-            </div>
+        <div class="container">
+            <h1>Welcome to UFC Champions 2022 - 2023</h1>
+            <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
+            <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
+            <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
+        </div>
+
+
+        <!-- About UFC Section -->
+        <section id="about-ufc">
+            <h2 class="center-align">About UFC</h2>
+            <p>
+                The Ultimate Fighting Championship (UFC) is a premier mixed martial arts (MMA) organization,
+                showcasing the world's best fighters across various weight classes.
+            </p>
+            <p>
+                UFC events are known for their intense competition, skillful athletes, and passionate fanbase.
+                Explore the rich history and dynamic journey of UFC champions through the years.
+            </p>
+        </section>
         {% endblock %}
 
         <!-- Additional Content Section -->
         {% block content %}
-            <div class="row">
+            <div class="row latest-champions">
                 <h2 class="center-align">Latest Champions</h2>
-                {% for champion in champions %}
+                {% for champion in champions[:3] %}
                     <div class="col s12 m6 l4">
                         <div class="card dark-card">
                             <div class="card-image">
