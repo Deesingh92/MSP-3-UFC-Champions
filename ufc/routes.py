@@ -31,6 +31,15 @@ def fighters():
 
     return render_template('fighters.html', champions=champions)
 
+@app.route("/add_champion", methods=["GET", "POST"])
+def add_champion():
+    if request.method == "POST":
+        champion = Champion(name=request.form.get("champion_name"))
+        db.session.add(champion)
+        db.session.commit()
+        return redirect(url_for("fighters"))
+    return render_template("add_champion.html")
+
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'POST':

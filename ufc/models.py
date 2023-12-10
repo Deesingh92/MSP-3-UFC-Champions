@@ -7,7 +7,7 @@ class Champion(db.Model):
     __tablename__ = 'champions'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    name = db.Column(db.String(255))
     country = db.Column(db.String)
     weight_class = db.Column(db.String)
     start_date = db.Column(db.DateTime)
