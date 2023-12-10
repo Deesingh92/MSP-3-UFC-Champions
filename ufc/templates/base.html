@@ -41,11 +41,11 @@
 
         <!-- Hero Section -->
         {% block hero_image %}
-        <div class="container">
-            <h1>Welcome to UFC Champions 2022 - 2023</h1>
-            <img src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
+        <div class="container hero-section">
+            <h1 class="hero-heading">Welcome to UFC Champions</h1>
+            <img class="hero-image" src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
             <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
-            <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button">Get Started</a>
+            <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button custom-btn">Get Started</a>
         </div>
 
 

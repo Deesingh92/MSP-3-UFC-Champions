@@ -26,12 +26,20 @@ footer {
 
 a {
     color: #ffd700 !important;
-    /* Gold links */
+    
 }
 
 a:hover {
     color: #ffa500 !important;
     /* Orange on hover */
+}
+.custom-btn {
+    background-color: #ffa500 !important; /* Change to the desired color */
+    color: #fff !important; /* Change to the desired text color */
+}
+
+.custom-btn:hover {
+    background-color: #ff8c00 !important; 
 }
 
 .brand-logo {
@@ -99,7 +107,6 @@ a:hover {
     background-color: #ffa500;
 }
 
-/* Add these styles to your CSS file */
 
 .card-image {
     position: relative;
@@ -116,7 +123,6 @@ a:hover {
     transform: scale(1.1); /* Optional: Add a zoom effect on hover */
 }
 
-/* Optional: Add styles for the card content */
 .card-content {
     padding: 15px;
 }
@@ -142,6 +148,28 @@ a:hover {
     height: 100%; /* Ensure the image covers the entire height of the card image container */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
     transition: transform 0.3s ease-in-out;
+}
+
+.hero-heading {
+    font-size: 50px; /* Adjust the font size as needed */
+    margin-bottom: 30px; /* Add some space below the heading */
+    text-align: center;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-image {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width to maintain quality */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px; /* Add some space above the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .latest-champions {
