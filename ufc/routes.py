@@ -51,6 +51,6 @@ def signin():
             session['user'] = username
             return redirect(url_for('home'))
 
-        return render_template('signin.html', error='Invalid credentials')
+        return render_template('signin.html', error='Invalid credentials' , champions=champions)
 
     return render_template('signin.html', error=None)

@@ -9,7 +9,8 @@
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -50,10 +51,19 @@
 
         <!-- About UFC Section -->
         <section id="about-ufc">
-            <h2 class="center-align">About UFC</h2>
+            <h2 class="center-align">About UFC Champions</h2>
             <p>
                 The Ultimate Fighting Championship (UFC) is a premier mixed martial arts (MMA) organization,
                 showcasing the world's best fighters across various weight classes.
+                The UFC Champions app is an immersive platform designed for enthusiasts of mixed martial arts (MMA) to
+                explore the dynamic world of Ultimate Fighting Championship (UFC) champions. Providing a comprehensive
+                overview of titleholders across various weight classes, the app showcases detailed profiles of each
+                champion, including their names, countries of origin, weight classes, start and end dates of their
+                reigns, and captivating images capturing key moments of their careers. Users can navigate through the
+                app to discover champions from diverse backgrounds and witness the evolution of the UFC landscape over
+                time. With an intuitive interface and responsive design, the UFC Champions app offers a seamless and
+                engaging experience, making it a go-to resource for fans seeking up-to-date information on the elite
+                fighters who have left an indelible mark on the world of MMA
             </p>
             <p>
                 UFC events are known for their intense competition, skillful athletes, and passionate fanbase.
@@ -64,29 +74,30 @@
 
         <!-- Additional Content Section -->
         {% block content %}
-            <div class="row latest-champions">
-                <h2 class="center-align">Latest Champions</h2>
-                {% for champion in champions[:3] %}
-                    <div class="col s12 m6 l4">
-                        <div class="card dark-card">
-                            <div class="card-image">
-                                {% if champion.image_url %}
-                                    <img src="{{ champion.image_url }}" alt="{{ champion.name }}">
-                                {% else %}
-                                    <img src="{{ url_for('static', filename='images/default_placeholder.jpg') }}" alt="Default Image">
-                                {% endif %}
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title">{{ champion.name }}</span>
-                                <p class="weight-class">{{ champion.weight_class }}</p>
-                                <p>Country: {{ champion.country }}</p>
-                                <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
-                                <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
-                            </div>
-                        </div>
+        <div class="row latest-champions">
+            <h2 class="center-align">Latest Champions</h2>
+            {% for champion in champions[:3] %}
+            <div class="col s12 m6 l4">
+                <div class="card dark-card">
+                    <div class="card-image">
+                        {% if champion.image_url %}
+                        <img src="{{ champion.image_url }}" alt="{{ champion.name }}">
+                        {% else %}
+                        <img src="{{ url_for('static', filename='images/default_placeholder.jpg') }}"
+                            alt="Default Image">
+                        {% endif %}
                     </div>
-                {% endfor %}
+                    <div class="card-content">
+                        <span class="card-title">{{ champion.name }}</span>
+                        <p class="weight-class">{{ champion.weight_class }}</p>
+                        <p>Country: {{ champion.country }}</p>
+                        <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
+                        <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
+        </div>
         {% endblock %}
     </main>
 
