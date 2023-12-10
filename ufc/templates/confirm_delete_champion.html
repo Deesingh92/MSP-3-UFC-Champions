@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirm Deletion{% endblock %}
+
+{% block content %}
+    <h2>Confirm Deletion</h2>
+    <p>Are you sure you want to delete the champion '{{ champion.name }}'?</p>
+    <form method="post" action="{{ url_for('delete_champion', champion_id=champion.id) }}">
+        <button type="submit" class="btn btn-danger">Yes, delete</button>
+        <a href="{{ url_for('fighters') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}

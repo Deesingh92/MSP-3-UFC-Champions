@@ -1,5 +1,5 @@
 from flask import render_template, request,  url_for, session
-from ufc import app
+from ufc import app, db
 from datetime import datetime
 from ufc.models import Champion
 
@@ -35,11 +35,10 @@ def add_champion():
     if request.method == "POST":
         name = request.form.get("champion_name")
         
-        # Assuming other form fields are present, and you retrieve them similarly
         
         new_champion = Champion(
             name=name,
-            country="",  # Add other form fields here
+            country="",  
             weight_class="",
             start_date=datetime.now(),
             end_date=datetime.now(),
@@ -74,22 +73,22 @@ def edit_champion(champion_id):
         return redirect(url_for("fighters"))
 
     return render_template("edit_champion.html", champion=champion)
-# Delete Champion route - Delete an existing champion
 
-@app.route("/delete_champion/<int:champion_id>", methods=["POST"])
+
+@app.route('/delete_champion/<int:champion_id>', methods=['POST'])
 def delete_champion(champion_id):
-    # Find the champion with the given ID
-    champion = next((c for c in champions if c.id == champion_id), None)
+    champion = Champion.query.get_or_404(champion_id)
 
-    if not champion:
-        return render_template("404.html"), 404
+    # Check if the champion is newly added
+    if champion.is_new:
+        db.session.delete(champion)
+        db.session.commit()
+        return redirect(url_for('fighters'))
+    else:
+        # Handle the case where you want to prevent deletion of non-new champions
+        # You can render an error page, flash a message, or redirect to another route
+        return render_template('error_page.html', error_message="Cannot delete non-new champions.")
 
-    # Remove the champion from the list (replace this with actual database deletion)
-    champions.remove(champion)
-
-    return redirect(url_for("fighters"))
-
-# 404 Error route
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
