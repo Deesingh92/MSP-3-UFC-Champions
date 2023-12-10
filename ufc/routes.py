@@ -1,7 +1,8 @@
-from flask import render_template, request,  url_for, session
+from flask import render_template, request, url_for, session, flash, redirect
 from ufc import app, db
 from datetime import datetime
 from ufc.models import Champion
+from flask_login import login_required
 
 champions = [
     Champion(name="Jon Jones", country="USA", weight_class="Heavyweight", start_date=datetime(2023, 3, 24), end_date=datetime.now(), image_url="static/images/jon-jones.jpeg"),
@@ -54,6 +55,7 @@ def add_champion():
     return render_template("add_champion.html")
 
 @app.route("/edit_champion/<int:champion_id>", methods=["GET", "POST"])
+@login_required
 def edit_champion(champion_id):
     champion = Champion.query.get(champion_id)
 
@@ -75,19 +77,18 @@ def edit_champion(champion_id):
     return render_template("edit_champion.html", champion=champion)
 
 
-@app.route('/delete_champion/<int:champion_id>', methods=['POST'])
+@app.route('/delete_champion/<int:champion_id>', methods=['GET', 'POST'])
+@login_required
 def delete_champion(champion_id):
     champion = Champion.query.get_or_404(champion_id)
 
-    # Check if the champion is newly added
-    if champion.is_new:
+    if request.method == 'POST':
         db.session.delete(champion)
         db.session.commit()
+        flash(f"Champion '{champion.name}' deleted successfully.", 'success')
         return redirect(url_for('fighters'))
-    else:
-        # Handle the case where you want to prevent deletion of non-new champions
-        # You can render an error page, flash a message, or redirect to another route
-        return render_template('error_page.html', error_message="Cannot delete non-new champions.")
+
+    return render_template('confirm_delete_champion.html', champion=champion)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -102,11 +103,22 @@ def signin():
         # Simulate a simple user for demonstration purposes
         if username == 'demo' and password == 'password':
             session['user'] = username
-            return redirect(url_for('home'))
+            flash('You have been successfully signed in.', 'success')
+            
+            # Redirect to the add_champion page upon successful sign-in
+            return redirect(url_for('add_champion'))
 
         return render_template('signin.html', error='Invalid credentials')
 
     return render_template('signin.html', error=None)
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('You have been logged out.', 'success')
+    return redirect(url_for('fighters'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
