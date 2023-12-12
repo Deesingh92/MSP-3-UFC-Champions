@@ -24,13 +24,23 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
-                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                {% endif %}
             </ul>
-
+    
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
-                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>

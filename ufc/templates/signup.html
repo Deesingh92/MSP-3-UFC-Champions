@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}UFC Champions - Sign In{% endblock %}
+{% block title %}UFC Champions - Fighters{% endblock %}
 
 {% block hero_image %}
-
+  
 {% endblock %}
 
 {% block content %}
-    <h2>Sign In</h2>
-    <form method="post" action="{{ url_for('signin') }}">
+    <h2>Sign Up</h2>
+    <form method="post" action="{{ url_for('signup') }}">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br>
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign Up</button>
     </form>
     {% if error %}
         <p style="color: red;">{{ error }}</p>
     {% endif %}
 
-    <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+    <p>Already have an account? <a href="{{ url_for('signin') }}">Sign In</a></p>
 {% endblock %}

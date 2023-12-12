@@ -3,6 +3,8 @@ import re
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env  # noqa
 
@@ -22,15 +24,14 @@ else:
     else:
         app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql:///ufc'
 
-
-
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
+db.init_app(app)
 
-class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), unique=True, nullable=False)
-    password = db.Column(db.String(50), nullable=False)
+
+with app.app_context():
+    db.create_all()
+
 
 @login_manager.user_loader
 def load_user(user_id):
