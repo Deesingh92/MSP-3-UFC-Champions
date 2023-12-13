@@ -24,6 +24,11 @@ footer {
     /* Gold text color */
 }
 
+
+.weight-class-buttons .btn {
+    margin-bottom: 10px; /* Adjust this value as needed */
+}
+
 a {
     color: #ffd700 !important;
     font-family: 'Afacad', sans-serif;
