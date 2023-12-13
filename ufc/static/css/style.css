@@ -246,7 +246,20 @@ a:hover {
     /* Adjust spacing between paragraphs */
 }
 
+nav .brand-logo {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+
 /* Responsive styling for smaller screens */
+@media only screen and (max-width: 600px) {
+    nav .brand-logo {
+        margin-left: 10px; /* Adjust the margin for mobile mode */
+    }
+}
+
+
+
 @media (max-width: 600px) {
     .latest-champions .card .card-image {
         max-height: 150px;
