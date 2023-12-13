@@ -3,95 +3,106 @@
 {% block title %}UFC Champions - Fighters{% endblock %}
 
 {% block hero_image %}
-  
+
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <h2 class="center-align search-heading">Search for Champions</h2>
-        <form id="searchForm" class="col s12" method="POST" action="{{ url_for('fighters') }}">
-            <div class="row">
-                <div class="col s12">
-                    <label>Select Weight Class:</label>
-                    <div class="row">
-                        <div class="col s2">
-                            <button id="btn-all" class="btn waves-effect waves-light" type="button">All</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-flyweight" class="btn waves-effect waves-light" type="button">Flyweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-bantamweight" class="btn waves-effect waves-light" type="button">Bantamweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-featherweight" class="btn waves-effect waves-light" type="button">Featherweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-lightweight" class="btn waves-effect waves-light" type="button">Lightweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-welterweight" class="btn waves-effect waves-light" type="button">Welterweight</button>
-                        </div>
+<div class="row">
+    <h2 class="center-align search-heading">Search for Champions</h2>
+    <form id="searchForm" class="col s12" method="POST" action="{{ url_for('fighters') }}">
+        <div class="row">
+            <div class="col s12">
+                <label>Select Weight Class:</label>
+                <div class="row">
+                    <div class="col s6 m3">
+                        <button id="btn-all" class="btn waves-effect waves-light" type="button">All</button>
                     </div>
-                    <div class="row">
-                        <div class="col s2">
-                            <button id="btn-middleweight" class="btn waves-effect waves-light" type="button">Middleweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-light-heavyweight" class="btn waves-effect waves-light" type="button">Light Heavyweight</button>
-                        </div>
-                        <div class="col s2">
-                            <button id="btn-heavyweight" class="btn waves-effect waves-light" type="button">Heavyweight</button>
-                        </div>
+                    <div class="col s6 m3">
+                        <button id="btn-flyweight" class="btn waves-effect waves-light" type="button">Flyweight</button>
+                    </div>
+                    <div class="col s6 m3">
+                        <button id="btn-bantamweight" class="btn waves-effect waves-light"
+                            type="button">Bantamweight</button>
+                    </div>
+                    <div class="col s6 m3">
+                        <button id="btn-featherweight" class="btn waves-effect waves-light"
+                            type="button">Featherweight</button>
+                    </div>
+                    <div class="col s6 m3">
+                        <button id="btn-lightweight" class="btn waves-effect waves-light"
+                            type="button">Lightweight</button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="searchName" type="text" name="searchName" placeholder="Enter Champion Name">
-                    <button class="btn waves-effect waves-light" type="submit">Search
-                        <i class="material-icons right"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+                <div class="row">
+                    <div class="col s6 m3">
+                        <button id="btn-welterweight" class="btn waves-effect waves-light"
+                            type="button">Welterweight</button>
+                    </div>
 
-        {% if champions %}
-            <div class="row" id="champions-container">
-                <h3 class="center-align">Search Results</h3>
-                {% for champion in champions %}
-                    <div class="col s12 m6 l4">
-                        <div class="card dark-card">
-                            {% if champion.image_url %}
-                                <div class="card-image">
-                                    <img src="{{ champion.image_url }}" alt="{{ champion.name }}" class="responsive-img">
-                                </div>
-                            {% endif %}
-                            <div class="card-content">
-                                <span class="card-title">{{ champion.name }}</span>
-                                <p class="weight-class">{{ champion.weight_class }}</p>
-                                <p>Country: {{ champion.country }}</p>
-                                <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
-                                <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
-                                <a href="{{ url_for('edit_champion', champion_id=champion.id) }}" class="waves-effect waves-light btn">Edit</a>
-                                <form method="POST" action="{{ url_for('delete_champion', champion_id=champion.id) }}" style="display:inline;">
-                                    <button type="submit" class="waves-effect waves-light btn red">Delete</button>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="col s6 m3">
+                        <button id="btn-middleweight" class="btn waves-effect waves-light"
+                            type="button">Middleweight</button>
                     </div>
-                {% endfor %}
-            </div>
-
-            <div class="row">
-                <div class="col s2">
-                    <a id="reset-filters-btn" class="waves-effect waves-light btn red" href="javascript:void(0);" onclick="resetFilters()">Reset Filters</a>
+                    <div class="col s6 m3">
+                        <button id="btn-light-heavyweight" class="btn waves-effect waves-light" type="button">Light
+                            Heavyweight</button>
+                    </div>
+                    <div class="col s6 m3">
+                        <button id="btn-heavyweight" class="btn waves-effect waves-light"
+                            type="button">Heavyweight</button>
+                    </div>
                 </div>
             </div>
-        {% else %}
-            <p>No champions found.</p>
-        {% endif %}
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="searchName" type="text" name="searchName" placeholder="Enter Champion Name">
+                <button class="btn waves-effect waves-light" type="submit">Search
+                    <i class="material-icons right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    {% if champions %}
+    <div class="row" id="champions-container">
+        <h3 class="center-align">Search Results</h3>
+        {% for champion in champions %}
+        <div class="col s12 m6 l4">
+            <div class="card dark-card">
+                {% if champion.image_url %}
+                <div class="card-image">
+                    <img src="{{ champion.image_url }}" alt="{{ champion.name }}" class="responsive-img">
+                </div>
+                {% endif %}
+                <div class="card-content">
+                    <span class="card-title">{{ champion.name }}</span>
+                    <p class="weight-class">{{ champion.weight_class }}</p>
+                    <p>Country: {{ champion.country }}</p>
+                    <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
+                    <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
+                    <a href="{{ url_for('edit_champion', champion_id=champion.id) }}"
+                        class="waves-effect waves-light btn blue">Edit</a>
+                    <form method="POST" action="{{ url_for('delete_champion', champion_id=champion.id) }}"
+                        style="display:inline;">
+                        <button type="submit" class="waves-effect waves-light btn red">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div class="row">
+        <div class="col s2">
+            <a id="reset-filters-btn" class="waves-effect waves-light btn red" href="javascript:void(0);"
+                onclick="resetFilters()">Reset Filters</a>
+        </div>
+    </div>
+    {% else %}
+    <p>No champions found.</p>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}

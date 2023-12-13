@@ -35,6 +35,11 @@ a:hover {
     color: #ffa500 !important;
     /* Orange on hover */
 }
+
+.sidenav {
+    background-color: black;
+}
+
 .custom-btn {
     background-color: #ffa500 !important; /* Change to the desired color */
     color: #fff !important; /* Change to the desired text color */
