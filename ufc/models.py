@@ -1,7 +1,8 @@
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from flask_login import UserMixin, login_user
+
 
 db = SQLAlchemy()
 
@@ -29,16 +30,15 @@ class Champion(db.Model):
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
-
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     hashed_password = db.Column(db.String(128), nullable=False)
 
     def set_password(self, password):
-        self.hashed_password = generate_password_hash(password, method='sha256')
+        self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
-        return check_password_hash(self.hashed_password, password)
+        return check_password_hash(self.password_hash, password)
     
     def get_id(self):
         return str(self.id)

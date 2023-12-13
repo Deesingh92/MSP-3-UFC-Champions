@@ -1,9 +1,8 @@
 import os
-import re
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
+from ufc.models import User
 
 if os.path.exists("env.py"):
     import env  # noqa
@@ -26,7 +25,6 @@ else:
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
-db.init_app(app)
 
 
 with app.app_context():

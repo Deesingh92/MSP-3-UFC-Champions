@@ -2,8 +2,8 @@ from flask import render_template, request, url_for, session, flash, redirect
 from ufc import app, db
 from datetime import datetime
 from ufc.models import Champion, User
-from flask_login import login_required, current_user, logout_user
-from werkzeug.security import generate_password_hash
+from flask_login import login_user, login_required, current_user, logout_user
+from werkzeug.security import generate_password_hash, check_password_hash
 
 champions = [
     Champion(name="Jon Jones", country="USA", weight_class="Heavyweight", start_date=datetime(2023, 3, 24), end_date=datetime.now(), image_url="static/images/jon-jones.jpeg"),
@@ -103,10 +103,10 @@ def signin():
 
     if request.method == 'POST':
         username = request.form.get('username')
-        password = request.form.get('password')
+        password = request.form.get('hashed_password')
         user = User.query.filter_by(username=username).first()
 
-        if user and check_password_hash(user.password, password):
+        if user and user.hashed_password and check_password_hash(user.hashed_password, password):
             login_user(user)
             flash('Login successful!', 'success')
 
@@ -134,7 +134,7 @@ def signup():
         hashed_password = generate_password_hash(password, method="sha256")
 
         # Create a new user instance
-        new_user = User(username=username, password=hashed_password)
+        new_user = User(username=username, hashed_password=hashed_password)
 
         # Add the new user to the database
         db.session.add(new_user)
