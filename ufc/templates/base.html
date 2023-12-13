@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Kanit&family=Rethink+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Kanit&family=Rethink+Sans&display=swap"
+        rel="stylesheet">
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -25,21 +26,21 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
                 {% if current_user.is_authenticated %}
-                    <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
                 {% endif %}
             </ul>
-    
+
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('fighters') }}">Fighters</a></li>
                 {% if current_user.is_authenticated %}
-                    <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a href="{{ url_for('add_champion') }}">Add Champion</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -54,7 +55,8 @@
             <h1 class="hero-heading">Welcome to UFC Champions</h1>
             <img class="hero-image" src="{{ url_for('static', filename='images/ufc_belt.jpg') }}" alt="UFC Belt Image">
             <p>Explore the list of champions in various weight classes from 2022 to 2023.</p>
-            <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button custom-btn">Get Started</a>
+            <a href="{{ url_for('fighters') }}" class="waves-effect waves-light btn cta-button custom-btn">Get
+                Started</a>
         </div>
 
 
@@ -110,12 +112,33 @@
         {% endblock %}
     </main>
 
+  
     <!-- Footer Section -->
     <footer class="page-footer black">
         <div class="container">
-            <p>&copy; 2023 UFC Champions. All rights reserved.</p>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@ufcchampions.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                </div>
+                <div class="col s12 m6 l6">
+                    <h5>Follow Us</h5>
+                    <p>Stay connected with us on social media:</p>
+                    <a href="#" target="_blank">Facebook</a> |
+                    <a href="#" target="_blank">Twitter</a> |
+                    <a href="#" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <hr>
+                    <p class="grey-text text-lighten-4">&copy; 2023 UFC Champions. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
 
     <!-- External Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
