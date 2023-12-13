@@ -35,27 +35,33 @@ def fighters():
     return render_template('fighters.html', champions=champions)
 
 
+
+
 @app.route("/add_champion", methods=["GET", "POST"])
 def add_champion():
     if request.method == "POST":
         name = request.form.get("champion_name")
-        
-        
+        country = request.form.get("country")  # Get the country from the form
+        weight_class = request.form.get("weight_class")  # Get the weight class from the form
+        start_date = datetime.now()
+        end_date = datetime.now()
+        image_url = ""  # You may want to handle image upload in the future
+
         new_champion = Champion(
             name=name,
-            country="",  
-            weight_class="",
-            start_date=datetime.now(),
-            end_date=datetime.now(),
-            image_url=""
+            country=country,
+            weight_class=weight_class,
+            start_date=start_date,
+            end_date=end_date,
+            image_url=image_url
         )
-        
+
         db.session.add(new_champion)
         db.session.commit()
-        
+
         # Now the new_champion object should have a valid id
         return redirect(url_for("fighters"))
-    
+
     return render_template("add_champion.html")
 
 @app.route("/edit_champion/<int:champion_id>", methods=["GET", "POST"])
