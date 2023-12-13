@@ -4,6 +4,9 @@ from datetime import datetime
 from ufc.models import Champion, User
 from flask_login import login_user, login_required, current_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy.orm.exc import UnmappedInstanceError
+from sqlalchemy.exc import InvalidRequestError
+from sqlalchemy.orm.session import make_transient
 
 champions = [
     Champion(name="Jon Jones", country="USA", weight_class="Heavyweight", start_date=datetime(2023, 3, 24), end_date=datetime.now(), image_url="static/images/jon-jones.jpeg"),
@@ -84,10 +87,20 @@ def delete_champion(champion_id):
     champion = Champion.query.get_or_404(champion_id)
 
     if request.method == 'POST':
-        db.session.delete(champion)
-        db.session.commit()
-        flash(f"Champion '{champion.name}' deleted successfully.", 'success')
-        return redirect(url_for('fighters'))
+        try:
+            # Make the champion object transient
+            make_transient(champion)
+
+            # Add the champion to the current session
+            db.session.add(champion)
+
+            db.session.delete(champion)
+            db.session.commit()
+
+            flash(f"Champion '{champion.name}' deleted successfully.", 'success')
+            return redirect(url_for('fighters'))
+        except InvalidRequestError:
+            db.session.rollback()  # Rollback the session to discard changes
 
     return render_template('confirm_delete_champion.html', champion=champion)
 
