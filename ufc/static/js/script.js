@@ -51,9 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   
-    document.getElementById('btn-all').addEventListener('click', function () {
-      resetFilters();
-    });
+
   
     document.getElementById('btn-flyweight').addEventListener('click', function () {
       filterChampions('Flyweight');
