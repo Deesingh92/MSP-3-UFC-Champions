@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize Materialize CSS side navigation
     let sidenavElements = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sidenavElements);
+
   
     function resetFilters() {
       var championsContainer = document.getElementById('champions-container');

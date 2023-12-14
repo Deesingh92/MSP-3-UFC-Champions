@@ -1,4 +1,4 @@
-from flask import render_template, request, url_for, session, flash, redirect
+from flask import render_template, request, url_for, flash, redirect
 from ufc import app, db
 from datetime import datetime
 from ufc.models import Champion, User
@@ -25,21 +25,17 @@ def fighters():
     if request.method == 'POST':
         weight_class = request.form.get('weight_class')
         champions_filtered = Champion.query.filter_by(weight_class=weight_class).all() if weight_class != 'all' else Champion.query.all()
-
         return render_template('fighters.html', champions=champions_filtered)
 
     champions = Champion.query.all()
     return render_template('fighters.html', champions=champions)
 
-
-
-
 @app.route("/add_champion", methods=["GET", "POST"])
 def add_champion():
     if request.method == "POST":
         name = request.form.get("champion_name")
-        country = request.form.get("country")  # Get the country from the form
-        weight_class = request.form.get("weight_class")  # Get the weight class from the form
+        country = request.form.get("country")
+        weight_class = request.form.get("weight_class")
         start_date = datetime.now()
         end_date = datetime.now()
         image_url = ""  # You may want to handle image upload in the future
@@ -55,13 +51,11 @@ def add_champion():
 
         db.session.add(new_champion)
         db.session.commit()
-
-        # Now the new_champion object should have a valid id
         return redirect(url_for("fighters"))
 
     return render_template("add_champion.html")
 
-@app.route("/edit_champion/<int:champion_id>", methods=["GET", "POST"])
+@app.route('/edit_champion/<int:champion_id>', methods=['GET', 'POST'])
 @login_required
 def edit_champion(champion_id):
     champion = Champion.query.get(champion_id)
@@ -78,11 +72,14 @@ def edit_champion(champion_id):
         champion.end_date = datetime.strptime(request.form.get("end_date"), "%Y-%m-%d")
         champion.image_url = url_for('static', filename=f'images/{champion.name.lower().replace(" ", "-")}.jpeg')
 
+       
         db.session.commit()
+
         return redirect(url_for("fighters"))
 
     return render_template("edit_champion.html", champion=champion)
 
+from flask import flash
 
 @app.route('/delete_champion/<int:champion_id>', methods=['GET', 'POST'])
 @login_required
@@ -90,14 +87,17 @@ def delete_champion(champion_id):
     champion = Champion.query.get_or_404(champion_id)
 
     if request.method == 'POST':
+        try:
+            db.session.expunge(champion)  # Explicitly expunge the object from the existing session
+            db.session.delete(champion)
+            db.session.commit()
+            flash(f"Champion '{champion.name}' deleted successfully.", 'success')
+            return redirect(url_for('fighters'))
+        except Exception as e:
+            flash(f"Error deleting champion: {str(e)}", 'danger')
+            db.session.rollback()
 
-        db.session.delete(champion)
-        db.session.commit()
-
-        flash(f"Champion '{champion.name}' deleted successfully.", 'success')
-        return redirect(url_for('fighters'))
     return render_template('confirm_delete_champion.html', champion=champion)
-
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -116,14 +116,11 @@ def signin():
         if user and user.hashed_password and check_password_hash(user.hashed_password, password):
             login_user(user)
             flash('Login successful!', 'success')
-
-            # Redirect to add_champions after successful login
             return redirect(url_for('add_champion'))
         else:
             flash('Invalid username or password', 'danger')
 
     return render_template('signin.html')
-
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -131,33 +128,28 @@ def signup():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        # Check if the username is already taken
         existing_user = User.query.filter_by(username=username).first()
         if existing_user:
             flash("Username already exists. Please choose a different one.", "danger")
             return redirect(url_for("signup"))
 
-        # Hash the password before storing it
         hashed_password = generate_password_hash(password, method="sha256")
-
-        # Create a new user instance
         new_user = User(username=username, hashed_password=hashed_password)
 
-        # Add the new user to the database
         db.session.add(new_user)
         db.session.commit()
 
         flash("Account created successfully. You can now sign in.", "success")
         return redirect(url_for("signin"))
 
-    return render_template("signup.html")   
+    return render_template("signup.html")
 
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     flash('You have been logged out.', 'success')
-    return redirect(url_for('home'))   
+    return redirect(url_for('home'))
 
 
 if __name__ == '__main__':
