@@ -14,39 +14,18 @@
                 <div class="col s12">
                     <label>Select Weight Class:</label>
                     <div class="row weight-class-buttons">
-                        <div class="col s6 m3">
-                            <button id="btn-flyweight" class="btn waves-effect waves-light" type="button">Flyweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-bantamweight" class="btn waves-effect waves-light" type="button">Bantamweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-featherweight" class="btn waves-effect waves-light" type="button">Featherweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-lightweight" class="btn waves-effect waves-light" type="button">Lightweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-welterweight" class="btn waves-effect waves-light" type="button">Welterweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-middleweight" class="btn waves-effect waves-light" type="button">Middleweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-light-heavyweight" class="btn waves-effect waves-light" type="button">Light Heavyweight</button>
-                        </div>
-                        <div class="col s6 m3">
-                            <button id="btn-heavyweight" class="btn waves-effect waves-light" type="button">Heavyweight</button>
-                        </div>
+                        {% for weight_class in ['Flyweight', 'Bantamweight', 'Featherweight', 'Lightweight', 'Welterweight', 'Middleweight', 'Light Heavyweight', 'Heavyweight'] %}
+                            <div class="col s6 m3">
+                                <button class="btn waves-effect waves-light weight-class-btn" data-weight-class="{{ weight_class }}" type="button">{{ weight_class }}</button>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <input id="searchName" type="text" name="searchName" placeholder="Enter Champion Name">
-                    <button class="btn waves-effect waves-light" type="submit">Search
-                        <i class="material-icons right"></i>
-                    </button>
+                    <button class="btn waves-effect waves-light" type="submit">Search<i class="material-icons right"></i></button>
                 </div>
             </div>
         </form>
@@ -69,12 +48,9 @@
                             <p>Country: {{ champion.country }}</p>
                             <p>Start Date: {{ champion.start_date.strftime('%Y-%m-%d') }}</p>
                             <p>End Date: {{ champion.end_date.strftime('%Y-%m-%d') }}</p>
-                            <a href="{{ url_for('edit_champion', champion_id=champion.id) }}"
-                               class="waves-effect waves-light btn blue">Edit</a>
-                            <form method="POST"
-                                  action="{{ url_for('delete_champion', champion_id=champion.id) }}"
-                                  style="display:inline;">
-                                <button type="submit" class="waves-effect waves-light btn red">Delete</button>
+                            <a href="{{ url_for('edit_champion', champion_id=champion.id) }}" class="waves-effect waves-light btn blue">Edit</a>
+                            <form method="POST" action="{{ url_for('delete_champion', champion_id=champion.id) }}" style="display:inline;">
+                                <button type="submit" class="waves-effect waves-light btn red delete-champion-btn" data-champion-id="{{ champion.id }}">Delete</button>
                             </form>
                         </div>
                     </div>
@@ -84,8 +60,7 @@
 
         <div class="row">
             <div class="col s2">
-                <a id="reset-filters-btn" class="waves-effect waves-light btn red" href="javascript:void(0);"
-                   onclick="resetFilters()">Reset Filters</a>
+                <a id="reset-filters-btn" class="waves-effect waves-light btn red" onclick="resetFilters()">Reset Filters</a>
             </div>
         </div>
     {% else %}
@@ -93,5 +68,5 @@
     {% endif %}
 </div>
 
-
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}

@@ -13,7 +13,7 @@
     <p>Are you sure you want to delete {{ champion.name }}?</p>
     
     <form method="post" action="{{ url_for('delete_champion', champion_id=champion.id) }}">
-      <button type="submit" class="waves-effect waves-light btn red" onclick="confirmDelete()">Delete</button>
+      <button type="submit" class="waves-effect waves-light btn red">Delete</button>
     </form>
   {% else %}
     <p>You need to be signed in to delete a champion. Please sign in <a href="{{ url_for('signin') }}">here</a>.</p>

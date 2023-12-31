@@ -56,7 +56,6 @@ def add_champion():
     return render_template("add_champion.html")
 
 @app.route('/edit_champion/<int:champion_id>', methods=['GET', 'POST'])
-@login_required
 def edit_champion(champion_id):
     champion = Champion.query.get(champion_id)
 
@@ -79,10 +78,7 @@ def edit_champion(champion_id):
 
     return render_template("edit_champion.html", champion=champion)
 
-from flask import flash
-
 @app.route('/delete_champion/<int:champion_id>', methods=['GET', 'POST'])
-@login_required
 def delete_champion(champion_id):
     champion = Champion.query.get_or_404(champion_id)
 
