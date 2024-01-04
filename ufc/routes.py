@@ -57,7 +57,7 @@ def add_champion():
 
 @app.route('/edit_champion/<int:champion_id>', methods=['GET', 'POST'])
 def edit_champion(champion_id):
-    champion = Champion.query.get(champion_id)
+    champion = db.session.query(Champion).get(champion_id)
 
     if not champion:
         return render_template("404.html"), 404
