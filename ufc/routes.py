@@ -84,7 +84,6 @@ def delete_champion(champion_id):
 
     if request.method == 'POST':
         try:
-            db.session.expunge(champion)  # Explicitly expunge the object from the existing session
             db.session.delete(champion)
             db.session.commit()
             flash(f"Champion '{champion.name}' deleted successfully.", 'success')
