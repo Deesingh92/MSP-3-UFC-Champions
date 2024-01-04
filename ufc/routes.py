@@ -85,21 +85,18 @@ def delete_champion(champion_id):
     
     champion = db.session.query(Champion).get(champion_id)
 
-    print(f"Champion details: {champion}")
+    
 
     if request.method == 'POST':
         try:
             if champion:
                 db.session.delete(champion)
                 db.session.commit()
-                print(f"Champion '{champion.name}' deleted successfully.")
                 flash(f"Champion '{champion.name}' deleted successfully.", 'success')
                 return redirect(url_for('fighters'))
             else:
-                print(f"Champion with ID {champion_id} not found.")
                 flash(f"Champion with ID {champion_id} not found.", 'danger')
         except Exception as e:
-            print(f"Error deleting champion: {str(e)}")
             flash(f"Error deleting champion: {str(e)}", 'danger')
             db.session.rollback()
 
