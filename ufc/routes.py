@@ -5,7 +5,7 @@ from ufc.models import Champion, User
 from flask_login import login_user, login_required, current_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(__name__, template_folder='ufc/templates')
+
 
 champions = [
     Champion(name="Jon Jones", country="USA", weight_class="Heavyweight", start_date=datetime(2023, 3, 24), end_date=datetime.now(), image_url="static/images/jon-jones.jpeg"),
