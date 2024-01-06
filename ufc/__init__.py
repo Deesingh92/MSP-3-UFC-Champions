@@ -10,6 +10,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ufc'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_POOL_SIZE'] = 40
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 if os.environ.get("DEVELOPMENT") == "True":
