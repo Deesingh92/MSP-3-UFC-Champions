@@ -1,10 +1,10 @@
 from datetime import datetime
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, login_user
+from ufc import db
 
 
-db = SQLAlchemy()
+
 
 class Champion(db.Model):
     __tablename__ = 'champions'
