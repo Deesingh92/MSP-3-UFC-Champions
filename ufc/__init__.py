@@ -7,7 +7,7 @@ if os.path.exists("env.py"):
     import env  # noqa
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ufc'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://pmecelvg:5cFMdsgnnSgXPuNsE81qQzVl84T0hnLd@surus.db.elephantsql.com/pmecelvg'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_POOL_SIZE'] = 40
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -23,7 +23,7 @@ else:
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 
-from ufc.models import User  # Move the import here to avoid circular imports
+from ufc.models import User 
 
 @login_manager.user_loader
 def load_user(user_id):

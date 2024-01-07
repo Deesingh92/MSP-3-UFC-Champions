@@ -298,23 +298,24 @@ This typography choice for the index page aims to create an aesthetically pleasi
 
 [Pexels](https://pexels.com/). Contents free images.
 [ESPN](https://www.espn.com/mma/). Images for fighter profiles.
+
+
 ### Wireframes
 
 Wireframes were created for mobile, tablet and desktop.
 
-[Index Page - Desktop](documentation/wireframes/info-wireframe-desktop.png) |
-[Instructions Page - Tablet](documentation/wireframes/info-wireframe-tablet.png) |
-[Insructions Page - Mobile](documentation/wireframes/info-wireframe-mobile.png)
+[Index Page - Desktop](ufc/static/images/wireframes/index-desktop.png) |
+[Index Page - Tablet](ufc/static/images/wireframes/index-tablet.png) |
+[Index Page - Mobile](ufc/static/images/wireframes/index-mobile.png)
 
-[Quiz Page (Questions) - Desktop](documentation/wireframes/quiz-wireframe-desktop.png) |
-[Quiz Page (Questions) - Tablet](documentation/wireframes/quiz-wireframe-tablet.png) |
-[Quiz Page (Questions) - Mobile](documentation/wireframes/quiz-wireframe-mobile.png)
+[Fighters Page - Desktop](ufc/static/images/wireframes/fighters-desktop.png) |
+[Fighters Page - Tablet](ufc/static/images/wireframes/fighters-tablet.png) |
+[Fighters Page - Mobile](ufc/static/images/wireframes/fighters-mobile.png)
 
-[Map Page - Desktop](documentation/wireframes/map-wireframe-desktop.png) |
-[Map Page - Tablet](documentation/wireframes/map-wireframe-tablet.png)|
-[Map Page - Mobile](documentation/wireframes/map-wireframe-mobile.png)
+[Sign In Page - Desktop](ufc/static/images/wireframes/signin-desktop.png) |
+[Sign In Page - Tablet](ufc/static/images/wireframes/signin-tablet.png)|
+[Sign In Page - Mobile](ufc/static/images/wireframes/signin-mobile.png)
 
-The final website design has maintained the simple structure as shown in the wireframes, with a few minor changes here and there. I wanted to keep the design quite minimalistic as I wanted to focus more on implementing javascript code to the Quiz and Map page.
 
 ### Features
 Features
@@ -398,11 +399,9 @@ Future Implementations:
 
 ### Accessibility
 
-    Keyboard Navigation: Guarantee seamless navigation using only the keyboard. Every interactive element, from quiz questions to buttons, should be accessible and operable via keyboard controls.
-
     Focus States: Implement clear and visible focus states for interactive elements. Users navigating with a keyboard should easily identify which element is currently in focus, ensuring a smooth and intuitive experience.
 
-    Screen Reader Compatibility: Ensure compatibility with screen readers by appropriately labeling and structuring quiz content. Use semantic HTML elements and provide alternative text for images and media, enhancing the experience for users with visual impairments.
+    Screen Reader Compatibility: Ensure compatibility with screen readers by appropriately labeling and structuring app content. Use semantic HTML elements and provide alternative text for images and media, enhancing the experience for users with visual impairments.
 
     Color Contrast: Prioritize sufficient color contrast between text and background elements to enhance readability for users with visual impairments. Regularly test color combinations to meet accessibility guidelines.
 
@@ -527,43 +526,7 @@ That's it! Your website should now be live on Heroku. Make sure to follow these 
 
 - [Materialize](https://materializecss.com/sidenav.html) - Code used to implement a side nav bar when viewed on a mobile device, and also custom classes for responsivness on different devices.
   
-- [Fisher Yates Shuffle](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Code used when researching how to uncheck a radio button when the user arrives at a new question within the quiz.
-
-- [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/ ) - Code used to add and get the total sum of the numbers in userAnswer array.
-
-- [W3schools HTML DOM Element classList](https://www.w3schools.com/jsref/prop_element_classlist.asp) - Code used to hide quiz questions div and display quiz answers div.
-
-- [Google maps API documentation](https://developers.google.com/maps/documentation/javascript/markers) - Code used for importing map and markers.
-
-- [Real Python](https://realpython.com/python-quiz-application/#add-variety-to-your-quiz) -
-Helping with the script and layout of the quiz.
-
-- [Design Shack](https://designshack.net/articles/css/inner-shadows-in-css-images-text-and-beyond/) - Used code to assist with correct box shadow placement.
-
-- [w3schools](https://www.w3schools.com/js/js_htmldom_eventlistener.asp) -
-Creating event listeners for my start game button.
-
-- [Simple Steps Code](https://simplestepscode.com/javascript-quiz-tutorial/) -
-Helping with the script and layout of the quiz.
-
-- [Qualtrics](https://www.qualtrics.com/support/survey-platform/survey-module/block-options/question-randomization/) -
-Randomisation of questions.
-
-- [Reqbin](https://reqbin.com/code/javascript/wc3qbk0b/javascript-fetch-json-example#:~:text=To%20fetch%20JSON%20from%20the,resolves%20with%20a%20JSON%20object.) - Fetching JSON file to script.js.
-
-### Content
-
-Content was written by me, with some assistance from some external website, I will list them below:
-
-- <https://www.radiotimes.com/quizzes/pub-quiz-sport/>
-  
-- <https://kwizzbit.com/sport-quiz-questions-and-answers/>
-  
-- <https://ahaslides.com/blog/40-free-sports-quiz-questions-and-answers/>
-  
-- <https://quizglobal.com/quizplay/quizplayqanda/Sports%20Pub%20Quiz%20Questions%20and%20Answers>
-  
-
+- [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login) - Used for logic for user authentication using Flask login.
 
 ### Acknowledgement
 
