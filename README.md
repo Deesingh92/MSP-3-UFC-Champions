@@ -1,29 +1,30 @@
-# Sports Quiz 2023
+# UFC Champions 2022-2024
 
-![Github last commit](https://img.shields.io/badge/last_commit-september-red
+![Github last commit](https://img.shields.io/badge/last_commit-January-red
 )
 ![Github contributers](https://img.shields.io/badge/contributors-1-orange
 )
-![Github languages](https://img.shields.io/badge/languages-3-yellow
+![Github languages](https://img.shields.io/badge/languages-5-yellow
 )
 ![Github html](https://img.shields.io/badge/html-40.2%25-green
 )
 ![Github w3c](https://img.shields.io/badge/w3c-validated-blue
 )
 
-![Am I Responsive](assets/images/am-i-responsive.png)
+![Mockup](ufc/static/images/mockup.png)
 
 ## Welcome
 
-Our primary aim is to provide an engaging and educational platform where sports enthusiasts can challenge their knowledge, explore the world of sports through an interactive Arena Map, and foster a vibrant community of like-minded fans. We strive to create an inclusive and user-friendly environment that appeals to both newcomers and seasoned sports aficionados, promoting learning, competition, and the joy of sports trivia. With a commitment to accessibility, usability, and future enhancements, our goal is to make the Sports Quiz Website the go-to destination for sports enthusiasts seeking fun and knowledge.
+Welcome to UFC Champions Hub!
+Discover the world of UFC like never before with our comprehensive Champions Hub. Our platform serves as the ultimate resource for UFC enthusiasts, providing a centralized space to explore, track, and engage with the champions who have left an indelible mark in the octagon. The primary aim of our application is to offer a user-friendly interface that seamlessly integrates a vast array of functionalities. Users can browse through a curated list of UFC champions, filter them by weight class, and stay up-to-date with their latest achievements. Whether you're a passionate fan or a dedicated follower of the sport, UFC Champions Hub caters to your needs, offering features such as champion addition, editing, and deletion. Our commitment to user security is reflected in robust authentication mechanisms, ensuring a safe and personalized experience. Join us on this exhilarating journey into the heart of UFC greatness – where every champion's story unfolds.
 
-[View Sports Quiz 2023 on Github](https://github.com/Deesingh92/MSP2-SportsQuiz2023)
+[View UFC Champions 2022-2024 on Github](https://github.com/Deesingh92/MSP2-SportsQuiz2023)
 
-[View the live website here](https://deesingh92.github.io/MSP2-SportsQuiz2023/)
+[View the live website here](https://ufc-champions-5d145a041a65.herokuapp.com/)
 
 - - -
 
-- [Sports Quiz 2023](#Sports-Quiz-2023)
+- [UFC Champions](#Sports-Quiz-2023)
   - [User Experience (UX)](#user-experience-ux)
     - [Initial Discussion](#initial-discussion)
       - [Key Information for the site](#key-information-for-the-site)
@@ -58,111 +59,165 @@ Our primary aim is to provide an engaging and educational platform where sports 
 
 ### Initial Discussion
 
-Welcome to the Sports Quiz Website! This repository houses the code and assets for a dynamic sports trivia quiz platform that caters to sports enthusiasts of all levels. Whether you're a casual fan or a sports guru, this website offers an engaging and challenging experience to test your knowledge and explore the world of sports.
+We laid the foundation for the UFC Champions Hub, an application designed to be the go-to platform for UFC enthusiasts. We focused on building a user-friendly interface that seamlessly integrates various functionalities to explore and engage with UFC champions. Our goal is to provide a centralized space for users to discover, track, and stay informed about the latest achievements of their favorite fighters. Through features like champion addition, editing, and deletion, we aim to make the platform dynamic and interactive. With a commitment to user security, we're dedicated to ensuring a safe and personalized experience for every fan of the octagon. The journey into the world of UFC greatness begins here, where passion meets innovation.
 
 #### Features
 
-- Interactive Quiz: Test your sports knowledge with a wide range of trivia questions spanning different sports, eras, and difficulty levels.
 
-- Arena Map: Explore an interactive Google Maps API-powered map featuring iconic sports arenas from around the world.
 
-- User-Friendly Design: Enjoy a seamless and intuitive user interface designed for easy navigation and engagement.
+  - Champion Database: Dive into a comprehensive database of UFC champions, featuring detailed profiles with information on nationality, weight class, and championship tenure.
 
-- Responsive: Access the quiz and content on various devices, including desktops, tablets, and smartphones.
+  -  Dynamic Filtering: Easily sort and filter champions based on weight classes, allowing users to find their favorite fighters quickly.
 
-- Score Tracking: Keep track of your quiz scores and compare them with other users on the global leaderboard.
+   - User Authentication: Sign up, sign in, and manage user profiles for a personalized experience within the UFC Champions Hub.
 
-- User Accounts: Create and customize user profiles, track quiz history, and compete with friends.
+   - Interactive UI: Enjoy an intuitive and visually engaging interface for seamless navigation and interaction.
 
-- Google Maps API Integration
-Our website leverages the Google Maps API to provide an immersive Arena Map experience. Users can explore and learn about legendary sports venues, access historical data, and gain insights into the world of sports architecture and history.
+   - Champion Management: Users can add, edit, or delete champions, contributing to the community-driven content of the platform.
 
+   - Aesthetic Appeal: Champion profiles include visually striking images, enhancing the overall aesthetic of the app.
+
+   - Community-Driven Content: Foster a sense of community by allowing users to actively participate in shaping and updating champion information.
+
+   - Responsive Design: Access the app across various devices, ensuring a consistent and enjoyable experience on desktops, tablets, and smartphones.
+
+   - User Notifications: Stay informed about new champions, updates, and community activities through user-friendly notifications.
+
+This UFC Champions Hub aims to be the go-to platform for UFC fans, providing an interactive and centralized space to stay connected with their favorite fighters and actively contribute to the community's content.
 #### Key Information for the site
 
-- The Sports Quiz is an engaging web application that offers sports enthusiasts a chance to challenge their sports trivia knowledge. With multiple difficulty levels, randomized questions, and a user-friendly interface, it provides an enjoyable and educational experience for users of all expertise levels. Explore a wide range of sports topics, answer multiple-choice questions, and track your score. The quiz is fully responsive, ensuring a seamless experience on desktop, tablet, and mobile devices.
-- Our Sports Quiz website takes your sports experience to the next level with an interactive map powered by the Google Maps API. Discover the biggest sports arenas around the globe, from iconic football stadiums to massive basketball arenas. With marker clusters, you can easily navigate and explore these world-renowned venues. Click on markers to view detailed information about each arena, including capacity, location, and notable events hosted. Whether you're a sports fan planning future trips or simply curious about these legendary venues, our Arena Map adds an exciting dimension to your sports trivia adventure.
+Welcome to UFC Champions Hub, your go-to web application for diving deep into the world of UFC! This platform caters to UFC enthusiasts, providing an immersive and informative experience. With an intuitive and user-friendly design, users can explore a comprehensive database of UFC champions, featuring detailed profiles, fight records, and captivating images. The platform offers interactive features, including user accounts, favorites, and personalized data tracking, ensuring a tailored experience for every user. Whether you're a seasoned UFC fan or just starting to delve into the world of mixed martial arts, UFC Champions Hub offers an engaging and educational journey. Discover champions across weight classes, explore their achievements, and stay updated with the latest in the UFC world. Our fully responsive design guarantees a seamless experience on desktop, tablet, and mobile devices. Join us in celebrating the champions who have left an indelible mark on the UFC, and elevate your UFC experience with UFC Champions Hub 2022-2024. 
 
 ### User Stories
 
 #### Client Goals
 
-- User Engagement: The client aims to create an engaging and interactive platform that captivates sports enthusiasts and trivia lovers. They want users to spend quality time on the website, enjoying the quiz, exploring sports arenas, and competing for high scores.
+   - User Engagement: Our primary goal is to create an engaging and interactive platform for UFC enthusiasts, providing a captivating experience for fans and trivia lovers alike. We want users to immerse themselves in the world of UFC, explore champion profiles, and participate in the quiz to test their knowledge of the sport.
 
-- Educational Value: The client wants the website to be more than just a game. They aim to provide valuable sports knowledge to users by crafting informative and diverse quiz questions that cover a wide range of sports topics.
+   - Comprehensive Fighter Profiles: We aim to offer detailed profiles of UFC champions, including their fight records, nationalities, and images. Users can delve into the backgrounds and accomplishments of their favorite fighters, enhancing their overall UFC experience.
 
-- Responsive Design: Ensuring a seamless user experience across various devices is a top priority. The client wants the website to be fully responsive, allowing users to play the quiz and explore sports arenas on desktops, tablets, and mobile devices.
+   - Responsive Design: Ensuring a seamless user experience across different devices is a top priority. Our UFC app will be fully responsive, allowing users to access fighter information, explore events, and enjoy the quiz on desktops, tablets, and smartphones.
 
-- User-Friendly Interface: User-friendliness is key. The client aims to create an intuitive and easy-to-navigate interface, making it simple for users to start playing, choose difficulty levels, and access information about sports venues.
+   - Intuitive User Interface: User-friendliness is key to our app's success. We strive to create an intuitive and easy-to-navigate interface, enabling users to effortlessly access fighter details, explore events, and engage with various features.
 
-- Visual Appeal: The client wants the website to be visually appealing, with eye-catching graphics and a clean layout. This includes using images, icons, and maps to enhance the overall design.
+   - Visual Appeal: We understand the importance of visual appeal. Our app will feature eye-catching graphics, clean layouts, and vibrant imagery to enhance the overall design and provide users with an aesthetically pleasing experience.
 
-- Google Maps Integration: One of the main goals is to integrate the Google Maps API effectively to showcase the world's biggest sports arenas. Users should be able to explore these venues easily and access relevant information.
+   - Fighter Statistics: To cater to statistics enthusiasts, we plan to include detailed statistical information about each champion. This includes data on successful title defenses, knockouts, submission victories, and other key metrics.
 
-- Score Tracking: The client intends to implement a score-tracking system to motivate users to continue playing and strive for higher scores. They want users to feel a sense of accomplishment as they progress through the quiz.
+   - Real-Time Updates: Keeping our content up-to-date is crucial. The app will receive regular updates with the latest UFC champion information, fight results, and event details to ensure users have access to the most current data.
 
-- Social Sharing: Encouraging users to share their quiz results and experiences on social media is a priority. The client aims to leverage social sharing to increase the website's visibility and reach a broader audience.
+   - Social Sharing: Encouraging users to share their favorite champions and engaging content on social media is a priority. We want our users to connect with fellow UFC fans, fostering a sense of community around the app.
 
-- Educational Content: Apart from the quiz, the client plans to include educational content about sports history, trivia, and fun facts. They hope to make the website a valuable resource for sports enthusiasts.
+   - Educational Content: Beyond fighter profiles, our app will include educational content about UFC history, trivia, and interesting facts. We aim to make the app a valuable resource for both seasoned fans and those new to the world of UFC.
 
-- Community Building: Building a community of sports fans is a long-term goal. The client envisions the website becoming a hub where users can discuss sports, share insights, and connect with like-minded individuals.
+   - Community Building: Our long-term vision involves building a vibrant community of UFC fans within the app. We want users to discuss fights, share insights, and connect with like-minded individuals, creating a thriving community of UFC enthusiasts.
 
 #### First Time Visitor Goals
 
-- Discover the Website: The primary goal of first-time visitors is to discover the website and understand its purpose. They want to quickly grasp that it's a sports quiz platform.
+    Discover the UFC App:
+        The primary goal for first-time visitors is to discover the UFC app and understand its purpose. They want to quickly identify that it's an application dedicated to UFC, providing comprehensive information about fighters, events, and quizzes related to the sport.
 
-- Learn How to Play: New visitors seek clear instructions on how to play the quiz. They want to understand the rules, difficulty levels, and how to answer questions.
+    Learn How to Explore Champions:
+        New visitors seek clear instructions on how to explore UFC champions featured in the app. They want to understand how to navigate fighter profiles, access detailed information, and stay updated on the latest champions.
 
-- Explore Arena Map: Visitors are curious about the interactive arena map and aim to explore it. They want to see markers for major sports arenas and learn more about them.
+    Explore Interactive Fighter Profiles:
+        Visitors are eager to explore the interactive fighter profiles within the app. They want to view champion details, including fight records, nationalities, and images, to gain a deeper understanding of their favorite fighters.
 
-- Select a Difficulty Level: Users intend to choose a difficulty level that matches their sports knowledge. They want to make an informed decision on whether to play an easy, medium, or hard quiz.
+    Select a Fighter and Weight Class:
+        Users intend to choose specific fighters and weight classes that interest them. They want to easily navigate through the app to find information about champions in different weight classes and select their preferred fighters.
 
-- Enjoy the Quiz Experience: Visitors want an enjoyable and challenging quiz experience. They aim to test their sports knowledge, answer questions, and track their score.
+    Enjoy the UFC Quiz Experience:
+        Visitors want an enjoyable and challenging quiz experience tailored to UFC. They aim to test their knowledge of the sport, answer questions about fighters and events, and track their quiz scores within the app.
 
-- Access Additional Content: Some visitors may be interested in accessing educational content related to sports history and trivia. They hope to find informative articles or fun facts.
+    Access Educational Content:
+        Some visitors may be interested in accessing educational content related to UFC history, trivia, and interesting facts. They hope to find informative articles or fun tidbits that enhance their overall UFC experience.
 
-- Connect on Social Media: New visitors who enjoy the website may want to connect with it on social media platforms. They aim to follow the website for updates and engage with the sports community.
+    Connect on Social Media:
+        New visitors who enjoy the UFC app may want to connect with it on social media platforms. They aim to follow the app for updates, engage with the UFC community, and stay informed about the latest in the world of UFC.
 
-- Share Results: If they perform well in the quiz, visitors may want to share their quiz results with friends on social media. They aim to showcase their sports knowledge and challenge others.
+    Share Favorite Fighters:
+        If they discover new favorite fighters, visitors may want to share these discoveries with friends on social media. They aim to showcase their passion for UFC and introduce others to notable fighters.
 
-- Receive Support: Visitors may need assistance or have questions while navigating the website. They hope to find clear contact or support information if they encounter issues.
+    Receive Support and Assistance:
+        Visitors may need assistance or have questions while navigating the app. They hope to find clear contact or support information within the app if they encounter any issues or uncertainties.
 
-- Leave Feedback: Some visitors may want to provide feedback or suggestions to improve the website. They aim to find a way to share their thoughts with the website administrators.
+    Leave Feedback:
+        Some visitors may want to provide feedback or suggestions to improve the UFC app. They aim to find a way to share their thoughts with the app administrators and contribute to its enhancement.
 
-- Explore Future Features: Curious users might be interested in any upcoming features or updates the website plans to introduce. They aim to learn about the website's future offerings.
+    Explore Future Features:
+        Curious users might be interested in any upcoming features or updates the UFC app plans to introduce. They aim to learn about the app's future offerings and stay excited about the evolving features.
 
-- Access the Website Responsively: Visitors expect the website to work seamlessly on various devices, including desktop computers, tablets, and mobile phones.
+    Access the App Responsively:
+        Visitors expect the UFC app to work seamlessly on various devices, including desktop computers, tablets, and mobile phones. They want to have a responsive and user-friendly experience regardless of the device they use to access the app.
+
+
 
 #### Returning Visitor Goals
 
-- Continue Playing and Competing: Returning visitors aim to pick up where they left off in the quiz. They want to continue playing, answering questions, and improving their scores.
+    Continue Exploring UFC Champions:
+        Returning visitors aim to pick up where they left off in exploring UFC champions. They want to continue browsing fighter profiles, checking for updates, and staying informed about the latest champions in the UFC app.
 
-- Explore New Questions: Users who have played before are interested in encountering new and challenging questions. They hope to see a fresh set of quiz questions to keep the game exciting.
+    Encounter New Fighter Information:
+        Users who have previously engaged with the app are interested in discovering new information about their favorite fighters. They hope to find updated details, fight records, and any additional content related to the fighters they follow.
 
-- Challenge Friends: Some returning visitors want to challenge their friends to play the quiz. They aim to share the website with friends and compete to see who scores higher.
+    Participate in UFC Community Discussions:
+        Visitors who enjoy the UFC app may want to engage in community discussions or forums related to UFC events and fighters. They aim to connect with fellow fans, share insights, and discuss the latest happenings in the UFC world.
 
-- Engage in Community Discussions: Returning visitors who enjoy the website may want to participate in community discussions or forums related to sports. They aim to connect with like-minded individuals and share insights.
+    Stay Updated on UFC Events:
+        Returning visitors want to stay informed about any updates on UFC events, fight schedules, and championship bouts. They aim to access the latest information within the app and plan their UFC viewing experience accordingly.
 
+    Refer Others to the UFC App:
+        Satisfied users may refer the UFC app to friends and fellow UFC enthusiasts. They aim to expand the app's user base and contribute to building a community of passionate UFC fans.
 
-- Stay Updated: Returning visitors want to stay informed about any website updates, new features, or additional content. They aim to remain engaged with the website's latest offerings.
+    Connect on Social Media:
+        Visitors who had a positive experience may want to connect with the UFC app on social media platforms. They aim to follow the app's social accounts for updates, behind-the-scenes content, and interactions with the UFC community.
 
-- Refer Others: Satisfied users may refer the website to others who share their interest in sports trivia. They aim to expand the website's user base and create a community of sports enthusiasts.
+    Provide Valuable Feedback:
+        Returning users with valuable feedback or suggestions for improvement hope to find a channel within the app to share their insights with the administrators. They aim to contribute to the app's enhancement and user satisfaction.
 
-- Connect on Social Media: Visitors who had a positive experience may want to connect with the website on social media platforms. They aim to follow the website's social accounts for updates and interactions.
-
-- Provide Feedback: Returning users who have valuable feedback or suggestions for improvement hope to find a channel to share their insights with the website administrators.
-
-- Explore Arena Map Updates: Visitors interested in sports venues may want to check for updates to the interactive arena map. They aim to discover new markers and information about sports arenas.
-
-- Enjoy a Seamless Experience: Returning visitors expect the website to provide a consistent and responsive experience across all devices, making it easy to play the quiz and explore content.
+   
+    Enjoy a Seamless UFC Experience:
+        Returning visitors expect the UFC app to provide a consistent and responsive experience across all devices. They want a seamless and user-friendly interface to continue enjoying the quiz and exploring UFC content effortlessly.
 
 #### Frequent Visitor Goals
 
-- Daily Quiz Challenge: Frequent visitors aim to make the sports quiz a daily or regular challenge. They want to test their sports knowledge frequently and maintain a consistent presence on the website.
+   - Stay Updated on Live Events:
+        Frequent visitors aim to stay up-to-date with live UFC events, including fight nights, pay-per-view bouts, and other significant competitions. They want real-time information and notifications for upcoming events.
 
-- Achieve Top Rankings: Dedicated players strive to achieve top rankings on the website's leaderboard. They aim to consistently perform well in the quiz and compete with other high-scoring users.
+   - Access Exclusive Content:
+        Dedicated users look forward to accessing exclusive content within the UFC app, such as behind-the-scenes footage, pre-fight interviews, and post-match analyses. They seek a comprehensive and immersive UFC experience.
 
-- Master All Difficulty Levels: Frequent players seek to master all difficulty levels, including easy, medium, and hard. They aim to prove their sports expertise across various quiz challenges.
+   - Participate in Predictions and Polls:
+        Frequent visitors may want to engage in predictions and polls related to UFC events. They aim to share their opinions, predict match outcomes, and see how their predictions compare with the broader UFC community.
 
+   - Customize Fighter Profiles:
+        Users who frequently interact with the app desire the ability to customize fighter profiles based on their preferences. They aim to personalize their experience by selecting favorite fighters, receiving tailored updates, and tracking specific divisions.
+
+   - Join Exclusive UFC Communities:
+        Dedicated UFC fans may seek access to exclusive communities or fan clubs within the app. They want to connect with like-minded individuals, share insights, and discuss UFC events in a community tailored to their interests.
+
+   - Receive Personalized Recommendations:
+        Frequent visitors expect personalized recommendations within the app, including suggested fighters to follow, recommended quizzes, and tailored content based on their UFC preferences and engagement history.
+
+   - Participate in Live Chat during Events:
+        Enthusiastic users may want to participate in live chat sessions or discussions during UFC events. They aim to share their reactions, discuss match moments, and connect with other fans in real-time.
+
+   - Unlock Achievements and Rewards:
+        Frequent users aspire to unlock achievements and receive rewards based on their participation, quiz scores, and overall engagement with the UFC app. They seek recognition for their dedication and knowledge.
+
+   - Contribute User-Generated Content:
+        Engaged users may want the opportunity to contribute user-generated content, such as fan art, fighter profiles, or unique UFC-related content. They aim to actively contribute to the app's community and content ecosystem.
+
+   - Enjoy Seamless Live Streaming:
+        Dedicated fans expect a seamless live streaming experience within the app for UFC events. They want high-quality video streaming, reliable connectivity, and an immersive viewing experience.
+
+   - Access Enhanced Statistic Analytics:
+        Frequent visitors with a keen interest in statistics seek enhanced analytics and insights related to UFC fighters, events, and match outcomes. They want detailed statistics and data visualizations to deepen their understanding of the sport.
+
+   - Receive Early Access to UFC Merchandise:
+        Engaged users may desire early access or exclusive offers on UFC merchandise available within the app. They aim to showcase their support for the fighters and the sport through branded merchandise.
+
+Frequent visitors look forward to an enriched and personalized experience that goes beyond basic interactions, fostering a sense of community and appreciation for the UFC.
 
 ## Design
 
@@ -170,81 +225,84 @@ Our website leverages the Google Maps API to provide an immersive Arena Map expe
 
 ![Small switch palette from ColorSpace](assets/images/small-spot-palette.png)
 
-The sports quiz uses this small spot palette, pulled from [ColorSpace](https://mycolor.space/?hex=%234059FD&sub=1), and generated from #4059FD, pulled from the logo colour chart above. I chose the color palette generated from #4059FD for my sports quiz website for several compelling reasons. This specific shade of blue, with its hexadecimal representation, exudes a sense of trust, reliability, and professionalism qualities that are essential for a sports-related platform. Additionally, blue is often associated with sports and athleticism, making it a natural choice. The palette's deep blue as the primary color conveys a sense of stability and calmness, providing an ideal backdrop for the quiz and information presented on the website. Moreover, the monochromatic variations of this blue, ranging from lighter tints to darker shades, allow for visual hierarchy and readability in the design, ensuring that users can easily navigate and engage with the content. Overall, this color palette not only aligns with the sports theme but also creates a visually pleasing and user-friendly experience for visitors to the site.
+    Dominant Colors:
 
+        Black: Use black as the primary color to represent strength, sophistication, and the intensity of UFC competitions. It also serves as a solid background for other vibrant elements.
+
+        Gold: As a primary color, gold signifies victory, excellence, and prestige. Use gold for significant highlights, championship elements, or premium features within the app.
+
+        Orange: Orange brings energy, enthusiasm, and excitement. It's a dynamic color that aligns well with the intensity of UFC. Use orange for accents, buttons, and interactive elements to draw attention.
+
+    Secondary Colors:
+
+        White: Employ white for text, backgrounds, and certain UI elements. White provides a clean and modern look, enhancing readability and creating a visual balance with the dominant colors.
+
+        Gray: Use various shades of gray for secondary elements, borders, or backgrounds. Gray adds depth to the design, creating a sense of hierarchy and ensuring that important components stand out.
+
+    Optional Accent Colors:
+        Gold: Consider incorporating gold accents sparingly to signify victory, championship, and excellence. Gold can be used for special highlights, achievements, or premium features within the app.
+
+    Color Psychology:
+        Black: Power, strength, sophistication.
+        White: Cleanliness, simplicity, clarity.
+        Gray: Balance, neutrality, professionalism.
+        Gold: Victory, excellence, prestige.
 
 
 ### Typography
 
 I used Google Fonts for the following font:
 
-#### Anton
-- Bold and Attention-Grabbing: "Anton" is a bold and eye-catching font with thick, heavy strokes. It can instantly capture the viewer's attention and make important elements, such as headings and titles, stand out on the page. This can be particularly effective in a sports-themed website where you want to convey energy and excitement.
+#### Afacad
+  Font: Afacad, sans-serif
+  Characteristics: Afacad provides a balance of simplicity and sophistication, making it an ideal choice for links. The sans-serif style enhances readability, and its modern aesthetic aligns seamlessly with the overall design theme of the UFC app.
 
-- Modern and Stylish: "Anton" has a modern and stylish appearance, which can give your website a contemporary and sophisticated look. This can be appealing to users who appreciate a trendy and visually pleasing design.
+Considerations:
 
-- Easy Readability: Despite its boldness, "Anton" maintains good readability, especially at larger font sizes. This ensures that your headings and titles remain legible and impactful, which is important for user engagement.
+  Consistency: Afacad is consistently used for links across the app, ensuring a uniform and recognizable look.
 
-- Contrast: "Anton" can create a pleasing contrast when paired with a more straightforward and readable font for body text. This contrast helps in emphasizing key elements without sacrificing overall readability.
+  Readability: The sans-serif style enhances readability on various devices, promoting a positive user experience.
 
-- Personality and Branding: Fonts play a significant role in conveying the personality and branding of a website. "Anton" can convey characteristics such as strength, excitement, and a sense of adventure, which may align well with the theme of sports and competition.
+This typography choice is intended to create a visually appealing and user-friendly interface for UFC app users. It also contributes to the overall brand identity, reinforcing the app's connection to the dynamic world of UFC
 
-- Variety: Using "Anton" for headings and titles while using a different font for body text provides variety in typography, adding visual interest to your website's design.
+#### Rethink Sans
 
-#### Poppins
+    Logo Font:
+        Font: Rethink Sans
+        Characteristics: Rethink Sans is a versatile and contemporary sans-serif font. Its clean lines and modern aesthetic make it well-suited for logo design. The font's simplicity ensures that the brand name is easily recognizable and stands out.
 
-- Readability: "Poppins" is known for its excellent readability, making it a great choice for body text and other content where readability is crucial. Its clean and straightforward design ensures that users can easily consume information without strain.
+Considerations:
 
-- Versatility: "Poppins" is a versatile font that works well in a wide range of design contexts. It's suitable for both headings and body text, allowing you to maintain a consistent and aesthetically pleasing typography throughout your website.
+    Brand Identity: Rethink Sans reinforces the brand identity of the UFC app, providing a distinctive and memorable appearance for the logo.
 
-- Modern and Clean Aesthetic: "Poppins" has a modern and clean appearance, which can give your website a contemporary and professional look. This can be appealing to users who appreciate a minimalist and visually pleasing design.
+    Versatility: The font's versatility allows for effective use in various contexts, maintaining clarity and impact.
 
-- Accessibility: Accessibility is a key consideration in web design. "Poppins" is designed with accessibility in mind, with well-defined letterforms and good contrast, making it easier for all users, including those with visual impairments, to read and navigate your content.
+This typography choice for the brand logo aims to create a strong and recognizable visual representation for the UFC app, contributing to a cohesive and impactful brand presence.
 
-- Multiple Weights and Styles: "Poppins" comes in a variety of weights and styles, providing flexibility in your typography choices. You can use different weights for headings, subheadings, and body text to create hierarchy and visual interest.
+#### Kanit
 
-- International Support: "Poppins" supports various languages and character sets, making it suitable for a global audience. This can be essential if your website targets users from diverse linguistic backgrounds.
+  Font: Kanit
+  Characteristics: Kanit is a contemporary and elegant sans-serif font. Its balanced and clean design provides a sophisticated look, enhancing the readability of content on the index page. The font brings a sense of modernity to the overall user interface.
 
-- Consistency: Consistency in typography helps create a cohesive and unified design. "Poppins" offers a consistent and harmonious style that can be maintained across different sections of your website.
+Considerations:
 
-- Compatibility: "Poppins" is a web-safe font, meaning it's widely supported by web browsers and devices. This ensures that your chosen font will display consistently for most users.
+    Readability: Kanit is chosen for its readability, ensuring that users can easily navigate and consume content on the index page.
 
-#### Ubuntu
+    Modern Aesthetic: The font contributes to a modern and visually appealing design, aligning with the energetic and dynamic theme of the UFC app.
 
-- Humanist Sans-Serif Design: "Ubuntu" is a humanist sans-serif font, which means it has a balanced and approachable design. This can contribute to a friendly and welcoming atmosphere on my website, making it more user-friendly.
+    Consistency: By using Kanit consistently on the index page, a cohesive and unified visual language is maintained throughout the app.
 
-- Readability: The font's design prioritizes readability, making it a suitable choice for body text and content-heavy sections of your website. Users can easily read and understand the text, which is essential for a quiz website where information is key.
-
-- Neutral Aesthetic: "Ubuntu" has a neutral and unobtrusive aesthetic. It doesn't draw excessive attention to itself, allowing users to focus on the content and functionality of my website, such as the quiz questions and answers.
-
-- Versatility: "Ubuntu" is a versatile font that works well in various design contexts. It can be used for both headings and body text, maintaining a consistent typography style throughout your website.
-
-- Accessibility: Accessibility is a critical consideration in web design. "Ubuntu" offers good legibility and readability, which is important for users with visual impairments or reading difficulties.
-
-- International Support: "Ubuntu" supports multiple languages and character sets, making it suitable for a global audience. If my website caters to users from diverse linguistic backgrounds, this font choice can be advantageous.
-
-- Modern and Open Source: "Ubuntu" is a modern and open-source font, aligning with the principles of accessibility and inclusivity. It's freely available and widely supported, making it accessible to web designers and developers.
-
-- Web Compatibility: "Ubuntu" is a web-safe font, meaning it's well-supported by most web browsers and devices, ensuring consistent display for your users.
-
-- Consistency: Maintaining consistent typography across my website enhances its visual coherence and professionalism. "Ubuntu" can help you achieve this consistency.
-
-- Personal Preference: Ultimately, font choices can also be influenced by personal preference and the overall aesthetic you wish to create for your website. If "Ubuntu" aligns with your vision, it can be a suitable choice.
-
-- The decision to use the "Ubuntu" font should align with the website's design goals and the user experience I wanted to provide. It's a practical and readable option that can contribute to a positive and user-friendly design.
-
-
-- Humanist Sans-Serif Design: I appreciate that "Ubuntu" has a humanist sans-serif design, which gives it a balanced and friendly appearance. This design choice contributes to a welcoming atmosphere on my website.
+This typography choice for the index page aims to create an aesthetically pleasing and user-friendly experience, providing a balance between modernity and readability.
 
 ### Imagery
 
 [Pexels](https://pexels.com/). Contents free images.
-
+[ESPN](https://www.espn.com/mma/). Images for fighter profiles.
 ### Wireframes
 
 Wireframes were created for mobile, tablet and desktop.
 
-[Instructions Page - Desktop](documentation/wireframes/info-wireframe-desktop.png) |
+[Index Page - Desktop](documentation/wireframes/info-wireframe-desktop.png) |
 [Instructions Page - Tablet](documentation/wireframes/info-wireframe-tablet.png) |
 [Insructions Page - Mobile](documentation/wireframes/info-wireframe-mobile.png)
 
@@ -259,44 +317,47 @@ Wireframes were created for mobile, tablet and desktop.
 The final website design has maintained the simple structure as shown in the wireframes, with a few minor changes here and there. I wanted to keep the design quite minimalistic as I wanted to focus more on implementing javascript code to the Quiz and Map page.
 
 ### Features
+Features
 
-The website consists of three pages, all of which are accessible from the navigation menu throughout the website. A custom 404 error page is also available if a user were to land on it.
+    Champion Database: Access a comprehensive database of UFC champions, including detailed profiles, fight records, and images.
 
-*All pages on the website have:*
+    Interactive Arena Map: Explore an interactive map showcasing iconic UFC arenas worldwide. Gain insights into each venue's history, capacity, and notable events.
 
+    User Authentication: Create a personalized account to track your interactions with the app, save favorite champions, and participate in community discussions.
 
-- Navigation Menu: Include a navigation menu or header that allows users to easily move between different sections of your website. This menu should typically include links to the Home page, Arena Map, Quiz, and any other relevant sections.
+    Responsive Design: Enjoy a seamless experience across various devices, from desktops to tablets and smartphones.
 
-- Footer: Include a footer at the bottom of each page with essential information, such as links to your social media profiles, copyright information, and perhaps a link to the homepage. It adds a professional touch and enhances user navigation.
+    User Profile Customization: Personalize your user profile, set preferences, and track your quiz scores over time.
 
-- Logo or Website Name: Display your website's logo or name prominently in the header section to reinforce brand identity and make it easy for users to identify your site.
+    Champion Addition and Editing: Contribute to the app by adding new champions or editing existing profiles. Keep the database up-to-date with the latest information.
 
-- Consistent Styling: Maintain a consistent look and feel across all pages by using the same color scheme, fonts, and overall design elements. This ensures visual coherence.
+    Social Sharing: Share your quiz results, favorite champions, or exciting arena discoveries on social media platforms. Connect with other UFC enthusiasts.
 
-- Call to Action (CTA): Include clear and consistent CTAs on each page, guiding users to take specific actions such as starting the quiz, exploring the Arena Map, or accessing additional content.
+    Educational Content: Explore articles and fun facts about UFC history, fighters, and events. Enhance your knowledge while enjoying the app.
 
-- Responsive Design: Ensure that your website is responsive, meaning it adapts and looks great on various devices, including desktops, tablets, and smartphones. This is crucial for user experience.
+    Community Forums: Engage in discussions with other users, share insights, and stay connected with the UFC community.
 
-- Breadcrumb Navigation: Implement breadcrumb navigation to show users their current location within the website's structure and provide an easy way to backtrack.
+    Dark Mode: Customize your app experience with a dark mode option for reduced eye strain in low-light environments.
 
-- Contact Information: If applicable, provide contact information or a contact form on pages where users may need assistance or have inquiries.
+    Search Functionality: Easily find specific champions, arenas, or quiz topics using the app's search feature.
 
-- Loading Indicator: If your website contains content that might take a moment to load (e.g., images or interactive elements), consider adding a loading indicator to keep users informed and engaged during the wait.
+    User Support: Access clear contact information or support channels for assistance, ensuring a smooth user experience.
 
-- Consistent Header and Footer Elements: Elements like your logo, navigation menu, and footer should remain consistent in their placement on each page, so users can easily find them.
+These features collectively contribute to an immersive and dynamic UFC app, catering to both casual fans and dedicated enthusiasts of the sport.
 
 
 *Info Area:*
 
-The "Info" section serves as your gateway to understanding how the Sports Quiz Website works. Here, you'll find step-by-step instructions on how to maximize your experience. Start by selecting your preferred difficulty level—easy, medium, or hard—from the home page. These levels offer varying degrees of challenge, so choose the one that suits your sports knowledge best. Once your difficulty level is set, the quiz will begin. You'll be presented with a series of sports-related questions, each with multiple-choice answer options. Carefully read each question and click on the answer you believe is correct. If you answer correctly, your score will increase, and you'll proceed to the next question. If you're unsure or make a mistake, don't worry; you can always learn from the questions and answers. Continue answering questions until you've completed the quiz for your chosen difficulty level. After the final question, you'll receive your quiz results, including your score.
+The "Info" section acts as your guide to navigating the UFC Champions app efficiently. Begin by visiting the Home page, where you can explore an array of UFC champions. Dive into the details of each champion, from their fighting styles to career achievements. To contribute to the app's growth, consider adding new champions or editing existing profiles. If you're a new user, kickstart your journey by signing up and customizing your profile. For a quick search, utilize the search functionality to find specific champions or weight classes. The app is designed for UFC enthusiasts of all levels, providing an immersive experience in the world of ultimate fighting.
 
-*Quiz Page:*
+*Fighters Page:*
 
-Our sports quiz is not just a game; it's a journey through the exciting world of sports knowledge. The quiz challenges enthusiasts of all levels to test their expertise, recall legendary moments, and dive into the rich tapestry of sports history and culture. What sets our quiz apart is its unique integration with the Google Maps API, allowing users to explore iconic sports arenas worldwide. As you answer questions and advance through the quiz, you'll unlock the interactive Arena Map, where you can virtually visit legendary stadiums, access historical information, and learn fascinating facts about these sporting meccas. With a variety of difficulty levels, user-friendly design, and responsive functionality, our quiz offers an engaging and educational experience for sports fans, whether they're newcomers or die-hard enthusiasts. Join us in celebrating the love of sports and challenge yourself to become a sports trivia champion.
+The Fighters page is your arena to explore the diverse world of UFC champions. Filter fighters based on weight classes to discover champions in your favorite categories. If you're interested in contributing to the app's content, consider adding a new champion or editing details of existing profiles. The page also allows you to edit or delete champions, ensuring the database remains accurate and up-to-date. Engage with the app by participating in discussions about your favorite fighters or discovering new talents. Whether you're a seasoned UFC fan or a newcomer to the sport, the Fighters page offers a comprehensive and interactive experience.
 
-*Map Page:*
+*Sign In Page:*
 
-The Map page can be accessed via the navigation link Arenas. Embark on a virtual journey to some of the world's most iconic sports arenas. Marvel at the grandeur of legendary stadiums that have witnessed thrilling victories and historic moments. With interactive markers, informative details, and captivating imagery, this page lets you explore these hallowed grounds from the comfort of your screen. Whether you're a die-hard fan or simply curious about these sporting meccas, the Arena Map is your passport to the heart of the action. Dive in and discover the epic history of sports venues that have left an indelible mark on the world of athletics.
+The Sign In page is your gateway to personalized interactions with the UFC Champions app. If you're a returning user, sign in to access your saved preferences, favorite champions, and quiz scores. For first-time visitors, the Sign In page provides an opportunity to create a new account. Enjoy the benefits of a personalized profile, track your engagement with the app, and join the UFC community. If you encounter any issues or need assistance, clear support information is available to ensure a seamless and enjoyable user experience. Sign in and immerse yourself in the dynamic world of UFC champions.
+
 
 *404 Error Page:*
 
@@ -304,78 +365,75 @@ This 404 page provides a friendly and lighthearted approach to help users naviga
 
 *Future Implementations:*
 
-- More Quiz Categories: Expand the quiz categories to cover a broader range of sports, including niche and less-known sports. This allows users to explore a variety of sports topics.
+Future Implementations:
 
-- User Accounts: Implement user account functionality, allowing users to create profiles, track their quiz history, and compete with friends or the global community for high scores.
+   - Expanded Fighter Categories: Broaden the app's scope by introducing more fighter categories, showcasing a diverse range of UFC fighters. Include niche and rising talents to provide users with a comprehensive exploration of the UFC roster.
 
-- Daily Challenges: Offer daily or weekly quiz challenges with unique themes and questions. Users can participate to earn rewards, badges, or special achievements.
+   - Advanced User Profiles: Implement user accounts, enabling users to create personalized profiles. Users can track their favorite fighters, save preferences, and engage with a community of UFC enthusiasts. Foster friendly competition by incorporating features for score comparisons and achievements.
 
-- Multiplayer Mode: Introduce a multiplayer mode where users can compete against each other in real-time quizzes. This adds a competitive and social dimension to the quiz experience.
+   - Weekly Challenges: Introduce weekly challenges or quizzes with specialized themes. Users can participate to earn badges, rewards, or unique achievements based on their knowledge of UFC fighters and events.
 
-- User-Generated Content: Allow users to submit their quiz questions and trivia facts. Implement a review system to ensure accuracy and quality, then feature user-generated content in the quiz.
+   - Live Rankings: Develop a live rankings feature, showcasing real-time updates on UFC fighter rankings. This dynamic feature allows users to stay current with the latest shifts in the UFC landscape.
 
-- Enhanced Arena Map: Continuously update the interactive arena map with additional markers, facts, and historical information about sports venues worldwide.
+   - Interactive Fight Predictions: Engage users with interactive fight prediction features. Users can make predictions for upcoming UFC events, share their insights, and compare their predictions with actual outcomes.
 
-- Gamification: Gamify the user experience by incorporating features like leaderboards, virtual rewards, and challenges to keep users engaged and motivated.
+   - Virtual Fight Nights: Create a virtual fight night experience, allowing users to simulate and analyze hypothetical matchups between different fighters. This feature adds a layer of strategic and speculative engagement for users.
 
-- Mobile App: Consider developing a mobile app version of the quiz for a seamless and convenient experience on smartphones and tablets.
+   - Community Tournaments: Organize community tournaments where users can compete against each other in predicting fight outcomes, trivia quizzes, or other UFC-related challenges. Fostering a sense of community and healthy competition is key.
 
-- Community Forums: Expand the community aspect of the website by creating dedicated forums or discussion boards where users can share sports-related insights, stories, and opinions.
+   - Augmented Reality (AR) Fighter Showcases: Explore the integration of augmented reality to allow users to virtually place their favorite fighters in their surroundings, creating immersive and interactive showcases.
 
-- Advanced Analytics: Implement analytics tools to gather user data and insights, helping you understand user behavior, preferences, and areas for improvement.
+   - Mobile App Extension: Consider developing a dedicated mobile app to provide users with on-the-go access to UFC fighter information, quizzes, and interactive features. This enhances user convenience and expands the app's reach.
 
-- Personalized Recommendations: Use user data to provide personalized quiz recommendations, content, and challenges based on individual interests and quiz history.
+   - In-App Purchases: Explore monetization options such as in-app purchases for premium content, exclusive fighter profiles, or ad-free experiences to support the sustainability of the app.
 
-- Monetization Options: Explore revenue-generating options, such as premium quizzes, ad placements, or partnerships with sports-related brands, to support the sustainability of the website.
+   - Social Media Integration: Strengthen social media integration by enabling users to share their favorite fighters, achievements, and UFC insights directly on their social platforms, fostering a sense of community and engagement.
 
-- Social Integration: Enhance social media integration by allowing users to share quiz results, achievements, and interesting sports facts directly on their social profiles.
+   - Accessibility Features: Prioritize accessibility improvements, ensuring that the app remains inclusive and user-friendly for individuals with diverse abilities.
 
-- Accessibility Improvements: Continuously audit and improve website accessibility to ensure that it remains inclusive for users with disabilities.
+   - Multilingual Support: Consider offering multilingual support to cater to a global user base, making UFC fighter information and quizzes accessible to a broader audience.
 
-- Content Partnerships: Collaborate with sports organizations, leagues, or athletes to provide exclusive content, interviews, or behind-the-scenes access for users.
+   - Feedback Mechanism: Implement a user-friendly feedback mechanism to gather suggestions, comments, and feature requests. Empower users to contribute to the ongoing enhancement and evolution of the UFC Champions app.
 
-- Language Support: Consider offering the quiz and content in multiple languages to expand your global user base.
-
-- Feedback Mechanism: Implement a user feedback mechanism to gather suggestions and comments, enabling users to contribute to the website's growth.
 
 ### Accessibility
 
-- Keyboard Navigation: Ensure that all interactive elements, including quiz questions, options, and buttons, can be accessed and used via keyboard navigation. Users should be able to move through the quiz and interact with all elements without relying on a mouse.
+    Keyboard Navigation: Guarantee seamless navigation using only the keyboard. Every interactive element, from quiz questions to buttons, should be accessible and operable via keyboard controls.
 
-- Focus States: Implement clear and visible focus states for interactive elements. When users navigate through the quiz using a keyboard, they should be able to see which element is currently in focus.
+    Focus States: Implement clear and visible focus states for interactive elements. Users navigating with a keyboard should easily identify which element is currently in focus, ensuring a smooth and intuitive experience.
 
-- Screen Reader Compatibility: Make sure that all quiz questions, options, and content are properly labeled and structured for screen readers. Use semantic HTML elements and provide alternative text for images and media.
+    Screen Reader Compatibility: Ensure compatibility with screen readers by appropriately labeling and structuring quiz content. Use semantic HTML elements and provide alternative text for images and media, enhancing the experience for users with visual impairments.
 
-- Color Contrast: Ensure sufficient color contrast between text and background elements to make content readable for users with visual impairments. Test color combinations to meet accessibility guidelines.
+    Color Contrast: Prioritize sufficient color contrast between text and background elements to enhance readability for users with visual impairments. Regularly test color combinations to meet accessibility guidelines.
 
-- Alt Text for Images: Include descriptive alternative text (alt text) for all images, including icons and buttons. Alt text should convey the purpose or content of the image to users who cannot see it.
+    Alt Text for Images: Include descriptive alternative text (alt text) for all images, icons, and buttons. Alt text should convey the purpose or content of the image to users who rely on screen readers or cannot view images.
 
-- ARIA Roles and Attributes: Use Accessible Rich Internet Applications (ARIA) roles and attributes to enhance the accessibility of dynamic content and interactive elements, such as the quiz.
+    ARIA Roles and Attributes: Use Accessible Rich Internet Applications (ARIA) roles and attributes to augment the accessibility of dynamic content and interactive elements, such as those within the UFC app.
 
-- Captions and Transcripts: If your website includes videos or audio content, provide closed captions for videos and transcripts for audio files. This benefits users with hearing impairments.
+    Captions and Transcripts: Provide closed captions for videos and transcripts for audio content to accommodate users with hearing impairments.
 
-- Text Resizing: Ensure that users can easily resize text without loss of content or functionality. Avoid fixed font sizes or layouts that break when text is enlarged.
+    Text Resizing: Enable easy text resizing without compromising content or functionality. Avoid fixed font sizes or layouts that may disrupt the user experience when text is enlarged.
 
-- Testing with Assistive Technologies: Regularly test your website with screen readers, keyboard navigation, and other assistive technologies to identify and address accessibility issues.
+    Testing with Assistive Technologies: Regularly conduct comprehensive testing with screen readers, keyboard navigation, and other assistive technologies to identify and address any potential accessibility issues within the UFC app.
 
-- Semantic HTML: Use semantic HTML elements (e.g., 'nav', 'header', 'main', 'button') to structure your web content logically. This aids users in understanding the content's organization.
+    Semantic HTML: Utilize semantic HTML elements (e.g., 'nav', 'header', 'main', 'button') to logically structure the UFC app's content, aiding users in comprehending the organization of information.
 
-- Skip to Content Link: Provide a "Skip to Content" link at the beginning of the page that allows users to bypass repetitive navigation and jump directly to the main quiz content.
+    Skip to Content Link: Include a "Skip to Content" link at the beginning of the page, allowing users to bypass repetitive navigation and swiftly jump to the primary content of the UFC app.
 
-- Error Handling: Ensure that error messages, such as incorrect quiz answers, are clear and provide guidance on how to correct them.
+    Error Handling: Ensure that error messages, such as incorrect quiz answers, are clear and provide guidance on rectifying the issue. Maintain a user-friendly approach to error communication.
 
-- Consistent Layout: Maintain a consistent and predictable layout and navigation structure throughout the website. Users should be able to understand and anticipate the placement of elements.
+    Consistent Layout: Uphold a consistent and predictable layout and navigation structure throughout the UFC app. Users should be able to anticipate the placement of elements for a more intuitive experience.
 
-- Responsive Design: Ensure that the website is responsive and adapts to different screen sizes and orientations, making it accessible on various devices.
+    Responsive Design: Guarantee that the UFC app is responsive, adapting seamlessly to different screen sizes and orientations. This ensures accessibility across a variety of devices.
 
-- User Testing: Conduct accessibility testing with users who have disabilities to gather feedback and make improvements based on their real-world experiences.
-- - -
+    User Testing: Actively engage in user testing with individuals who have disabilities to gather valuable feedback and make continuous improvements based on real-world experiences.
+
 
 ## Technologies Used
 
 ### Languages Used
 
-HTML, CSS and Javascript were used to create this website.
+HTML, CSS, Javascript, Python and SQL were used to create this website.
 
 ### Frameworks, Libraries & Programs Used
 
@@ -393,46 +451,61 @@ HTML, CSS and Javascript were used to create this website.
 
 - [Google Fonts](https://fonts.google.com/) - To import and use the fonts from the website.
 
-
-- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Used for inserting a dropdown menu in mobile responsive design.
-
+- [Materialize](https://materializecss.com/) - Used Side Nav and custom classes, for responsive design.
 
 - [Am I Responsive](https://ui.dev/amiresponsive?url=https://deesingh92.github.io/MSP2-SportsQuiz2023/) - To show the website on a range of devices.
 
 - [Google Dev Tools] - To troubleshoot and test various features, and solve issues with responsiveness and styling.
 
+- [Heroku](https://dashboard.heroku.com/apps/ufc-champions/deploy/github) - To deploy the live website.
 
-- [Favicon](https://favicon.io/) - Used timer emoji favicon for website.
+- [Favicon](https://favicon.io/) - Used custom ufc favicon for website.
 
 ## Deployment & Local Development
 
 ### Deployment
 
-Github Pages was used to deploy the live website. The instructions are as followed:
+Heroku was used to deploy the live website using these steps:
+Step 1: Create a New Heroku App
 
-1. Log in (sign up) to Github.
-2. Search for this repository, MSP2-SportsQuiz2023.
-3. Navigate to the settings tab.
-4. On the left hand menu click on the pages link.
-5. In the source section, select main from the drop down menu under Branch.
-6. Select root from the drop down folder and click save.
-7. Your live Github pages site is now deployed at the following: [Deesingh92](https://github.com/Deesingh92/MSP2-SportsQuiz2023)
+    Login to Heroku:
+    Login to your Heroku account on the Heroku Dashboard.
+
+    Create New App:
+    Click on the "New" button and select "Create new app." Choose a unique name for your app.
+
+Step 2: Deploy Your Code
+
+    Deploy Tab:
+    In the Heroku Dashboard, go to the "Deploy" tab.
+
+    Connect to GitHub:
+    Under the "Deployment method" section, choose "GitHub" as your deployment method. Connect your GitHub repository to your Heroku app.
+
+    Select Branch:
+    Choose the branch you want to deploy from your GitHub repository.
+
+    Deploy Branch:
+    Click the "Deploy Branch" button to deploy your code to Heroku.
+
+Step 3: Configure Your Environment
+
+    Settings Tab:
+    In the Heroku Dashboard, go to the "Settings" tab.
+
+    Config Vars:
+    Under the "Config Vars" section, add any environment variables your app needs.
+
+Step 4: Open Your App
+
+    Open App:
+    Your app should be live now. Click the "Open App" button in the Heroku Dashboard to view your deployed website.
+
+That's it! Your website should now be live on Heroku. Make sure to follow these steps whenever you want to update your code or make changes to your app. Adjust the steps if you are using a different hosting platform or deployment strategy.
+
 
 ### Local Development
 
-
-
-#### How to Clone
-
-To clone the Sports Quiz 2023 repository:
-
-1. Log in (sign up) to Github.
-2. Search for this repository, MSP2-SportsQuiz2023.
-3. Select the code button and choose whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown to your clipboard.
-4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
-5. Type 'git clone' into the terminal and then paste the link you copied. Select enter.
-
-- - -
 
 ## Testing
 |Page|Device|Lighthouse Result|
@@ -452,7 +525,7 @@ To clone the Sports Quiz 2023 repository:
 
 ### Code Used
 
-- [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/components/dropdowns/) - Code used to implement a dropdown menu bar when viewed on a mobile device.
+- [Materialize](https://materializecss.com/sidenav.html) - Code used to implement a side nav bar when viewed on a mobile device, and also custom classes for responsivness on different devices.
   
 - [Fisher Yates Shuffle](https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/) - Code used when researching how to uncheck a radio button when the user arrives at a new question within the quiz.
 
