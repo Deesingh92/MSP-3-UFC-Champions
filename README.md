@@ -223,8 +223,6 @@ Frequent visitors look forward to an enriched and personalized experience that g
 
 ### Colour Scheme
 
-![Small switch palette from ColorSpace](assets/images/small-spot-palette.png)
-
     Dominant Colors:
 
         Black: Use black as the primary color to represent strength, sophistication, and the intensity of UFC competitions. It also serves as a solid background for other vibrant elements.
@@ -541,6 +539,17 @@ I used [W3 HTML Validator](https://validator.w3.org/) to validate all HTML files
 <summary>Add Champion</summary>
 
 ![HTML Validation Screenshot](ufc/static/images/testing/html-add_champion.png)
+
+
+### CSS
+
+I used [W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+</details>
+<details>
+<summary>CSS Validation</summary>
+
+![CSS Validation Screenshot](ufc/static/images/testing/css-error.png)
 
 - - -
 
