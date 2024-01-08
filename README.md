@@ -18,13 +18,13 @@
 Welcome to UFC Champions Hub!
 Discover the world of UFC like never before with our comprehensive Champions Hub. Our platform serves as the ultimate resource for UFC enthusiasts, providing a centralized space to explore, track, and engage with the champions who have left an indelible mark in the octagon. The primary aim of our application is to offer a user-friendly interface that seamlessly integrates a vast array of functionalities. Users can browse through a curated list of UFC champions, filter them by weight class, and stay up-to-date with their latest achievements. Whether you're a passionate fan or a dedicated follower of the sport, UFC Champions Hub caters to your needs, offering features such as champion addition, editing, and deletion. Our commitment to user security is reflected in robust authentication mechanisms, ensuring a safe and personalized experience. Join us on this exhilarating journey into the heart of UFC greatness – where every champion's story unfolds.
 
-[View UFC Champions 2022-2024 on Github](https://github.com/Deesingh92/MSP2-SportsQuiz2023)
+[View UFC Champions 2022-2024 on Github](https://github.com/Deesingh92/MSP-3-UFC-Champions)
 
 [View the live website here](https://ufc-champions-5d145a041a65.herokuapp.com/)
 
 - - -
 
-- [UFC Champions](#Sports-Quiz-2023)
+- [UFC Champions]
   - [User Experience (UX)](#user-experience-ux)
     - [Initial Discussion](#initial-discussion)
       - [Key Information for the site](#key-information-for-the-site)
@@ -500,7 +500,7 @@ Step 4: Open Your App
     Open App:
     Your app should be live now. Click the "Open App" button in the Heroku Dashboard to view your deployed website.
 
-That's it! Your website should now be live on Heroku. Make sure to follow these steps whenever you want to update your code or make changes to your app. Adjust the steps if you are using a different hosting platform or deployment strategy.
+That's it! Your website should now be live on Heroku. Make sure to follow these steps whenever you want to update your code or make changes to the app. Adjust the steps if you are using a different hosting platform or deployment strategy.
 
 
 ### Local Development
@@ -509,15 +509,43 @@ That's it! Your website should now be live on Heroku. Make sure to follow these 
 ## Testing
 |Page|Device|Lighthouse Result|
 |---|---|---|
-|Index|Desktop|![Index Desktop Results (Updated)](documentation/testing/lighthouse-testing-index-desktop1.png)|
-|Index|Mobile|![Index Mobile Results](documentation/testing/lighthouse-testing-index-mobile.png)|
-|Map|Desktop|![Arenas Desktop Results](documentation/testing/lighthouse-testing-map-desktop.png)|
-|Map|Mobile|![Arenas Mobile Results](documentation/testing/lighthouse-testing-map-mobile.png)|
-|404|Desktop|![404 Desktop Results](documentation/testing/lighthouse-testing-404-desktop.png)|
-|404|Mobile|![404 Mobile Results](documentation/testing/lighthouse-testing-404-mobile.png)|
-|w3 HTML Validation|![HTML Validation](documentation/testing/html-validation.png)|
-|w3 css Validation|![css Validation](documentation/testing/css-validation.png)|
-|JSHINT|![JsHint Validation](documentation/testing/jshint-test-result.png)|
+|Index|Desktop|![Index Desktop Results (Updated)](ufc/static/images/testing/lighthouse-desktop.png)|
+|Index|Mobile|![Index Mobile Results](ufc/static/images/testing/lighthouse-mobile.png)|
+|Fighters|Desktop|![Fighters Desktop Results](ufc/static/images/testing/lighthouse-desktop-fighters.png)|
+|Fighters|Mobile|![Fighters Mobile Results](ufc/static/images/testing/lighthouse-mobile-fighters.png)|
+
+### HTML
+
+I used [W3 HTML Validator](https://validator.w3.org/) to validate all HTML files by URI, pasting each page into the address bar and checking to ensure no errors were found.
+
+<details>
+<summary>Home</summary>
+
+![HTML Validation Screenshot](ufc/static/images/testing/html-home.png)
+
+</details>
+<details>
+<summary>Fighters</summary>
+
+![HTML Validation Screenshot](ufc/static/images/testing/html-home.png)
+
+</details>
+<details>
+<summary>Filtered Recipes</summary>
+
+![HTML Validation Screenshot](/static/images/readme/testing/htmltestfilterrecipe.webp)
+
+</details>
+<details>
+<summary>Recipe Details</summary>
+
+![HTML Validation Screenshot](/static/images/readme/testing/htmltestrecipedetails.webp)
+
+</details>
+<details>
+<summary>Categories</summary>
+
+![HTML Validation Screenshot](/static/images/readme/testing/htmltestcategory.webp)
 - - -
 
 ## Credits
