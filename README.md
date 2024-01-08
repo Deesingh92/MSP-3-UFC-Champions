@@ -504,55 +504,6 @@ That's it! Your website should now be live on Heroku. Make sure to follow these 
 ### Local Development
 
 
-## Testing
-|Page|Device|Lighthouse Result|
-|---|---|---|
-|Index|Desktop|![Index Desktop Results (Updated)](ufc/static/images/testing/lighthouse-desktop.png)|
-|Index|Mobile|![Index Mobile Results](ufc/static/images/testing/lighthouse-mobile.png)|
-|Fighters|Desktop|![Fighters Desktop Results](ufc/static/images/testing/lighthouse-desktop-fighters.png)|
-|Fighters|Mobile|![Fighters Mobile Results](ufc/static/images/testing/lighthouse-mobile-fighters.png)|
-
-### HTML
-
-I used [W3 HTML Validator](https://validator.w3.org/) to validate all HTML files by URI, pasting each page into the address bar and checking to ensure no errors were found.
-
-<details>
-<summary>Home</summary>
-
-![HTML Validation Screenshot](ufc/static/images/testing/html-home.png)
-
-</details>
-<details>
-<summary>Fighters</summary>
-
-![HTML Validation Screenshot](ufc/static/images/testing/html-fighters-error.png)
-![HTML Validation Screenshot](ufc/static/images/testing/html-fighters.png)
-
-</details>
-<details>
-<summary>Signin</summary>
-
-![HTML Validation Screenshot](ufc/static/images/testing/html-signin.png)
-
-</details>
-<details>
-<summary>Add Champion</summary>
-
-![HTML Validation Screenshot](ufc/static/images/testing/html-add_champion.png)
-
-
-### CSS
-
-I used [W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
-
-</details>
-<details>
-<summary>CSS Validation</summary>
-
-![CSS Validation Screenshot](ufc/static/images/testing/css-error.png)
-
-- - -
-
 ## Credits
 
 ### Code Used
@@ -566,3 +517,19 @@ I used [W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
 I would like to acknowledge the following people who helped and guided me in completing my second milestone project:
 
 - Bristol College
+
+## Testing
+|Page|Device|Lighthouse Result|
+|---|---|---|
+|Index|Desktop|![Index Desktop Results (Updated)](ufc/static/images/testing/lighthouse-desktop.png)|
+|Index|Mobile|![Index Mobile Results](ufc/static/images/testing/lighthouse-mobile.png)|
+|Fighters|Desktop|![Fighters Desktop Results](ufc/static/images/testing/lighthouse-desktop-fighters.png)|
+|Fighters|Mobile|![Fighters Mobile Results](ufc/static/images/testing/lighthouse-mobile-fighters.png)|
+|w3 HTML Validation-Index|![HTML Validation](ufc/static/images/testing/html-home.png)|
+|w3 HTML Validation-Fighters(error)|![HTML Validation](ufc/static/images/testing/html-fighters-error.png)|
+|w3 HTML Validation-Fighters(clean)|![HTML Validation](ufc/static/images/testing/html-fighters.png)|
+|w3 HTML Validation-Signin|![HTML Validation](ufc/static/images/testing/html-signin.png)|
+|w3 HTML Validation-Add_Champion|![HTML Validation](ufc/static/images/testing/html-add_champion.png)|
+|w3 css Validation|![css Validation](ufc/static/images/testing/css-error.png)| Error due to materialize css
+|JSHINT|![JsHint Validation](ufc/static/images/testing/jshint.png)| M is undefined as it comes defined standard with materialize 
+- - -

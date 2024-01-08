@@ -265,10 +265,6 @@ nav .brand-logo {
     color: white;
 }
 
-.table-of-contents a {
-    letter-spacing: 1px;
-}
-
 /* Responsive styling for smaller screens */
 @media only screen and (max-width: 600px) {
     nav .brand-logo {
