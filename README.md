@@ -527,25 +527,21 @@ I used [W3 HTML Validator](https://validator.w3.org/) to validate all HTML files
 <details>
 <summary>Fighters</summary>
 
-![HTML Validation Screenshot](ufc/static/images/testing/html-home.png)
+![HTML Validation Screenshot](ufc/static/images/testing/html-fighters-error.png)
+![HTML Validation Screenshot](ufc/static/images/testing/html-fighters.png)
 
 </details>
 <details>
-<summary>Filtered Recipes</summary>
+<summary>Signin</summary>
 
-![HTML Validation Screenshot](/static/images/readme/testing/htmltestfilterrecipe.webp)
-
-</details>
-<details>
-<summary>Recipe Details</summary>
-
-![HTML Validation Screenshot](/static/images/readme/testing/htmltestrecipedetails.webp)
+![HTML Validation Screenshot](ufc/static/images/testing/html-signin.png)
 
 </details>
 <details>
-<summary>Categories</summary>
+<summary>Add Champion</summary>
 
-![HTML Validation Screenshot](/static/images/readme/testing/htmltestcategory.webp)
+![HTML Validation Screenshot](ufc/static/images/testing/html-add_champion.png)
+
 - - -
 
 ## Credits
