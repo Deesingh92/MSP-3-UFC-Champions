@@ -57,13 +57,52 @@ Discover the world of UFC like never before with our comprehensive Champions Hub
 
 ## User Experience (UX)
 
+### Strategy
+
+The goal is to create a good quality list of movies to quickly find a suitable movie or book, to advertise books for people of all ages who like movies and books.
+
+### Scope
+
+Features that should be in the project:
+* Navbar with menu and logo
+* Home page with several recently added champions sorted by time added
+* Fighters page with champion collection
+* Weight category filter 
+* Search bar where fighters can be found by name with freetext
+* Sign In/Sign Up pages
+* Add fighter page for users who are logged in
+* Edit fighter page for users who are logged in
+* Admin user role that can add/delete fighters and edit/delete any fighters in the collection.
+* Log out functonality
+
+
+### Structure
+
+All pages have a fixed navbar with main menu, logo and username of a user that is currently logged in.
+
+The website has:
+* A Home page with a banner, welcome message and recently added fighters for all users
+* A fighters page with all fighter which can be filtered by name for all users
+* Sign in and sign up pages for all users
+* Add and edit fighters page for registered users
+* Edit, delete fighters buttons
+* Log out button
+
+### Surface
+
+The design of website based on [material design base colors](https://materializecss.com/color.html) color style. 
+For readability of the site a simple white background and black text were chosen.
+Colors for home page and buttons:
+
+* #ffd700 gold -  for buttons and anchor links
+* red - for delete buttons
+* blue -  for edit buttons
+
 ### Initial Discussion
 
 We laid the foundation for the UFC Champions Hub, an application designed to be the go-to platform for UFC enthusiasts. We focused on building a user-friendly interface that seamlessly integrates various functionalities to explore and engage with UFC champions. Our goal is to provide a centralized space for users to discover, track, and stay informed about the latest achievements of their favorite fighters. Through features like champion addition, editing, and deletion, we aim to make the platform dynamic and interactive. With a commitment to user security, we're dedicated to ensuring a safe and personalized experience for every fan of the octagon. The journey into the world of UFC greatness begins here, where passion meets innovation.
 
 #### Features
-
-
 
   - Champion Database: Dive into a comprehensive database of UFC champions, featuring detailed profiles with information on nationality, weight class, and championship tenure.
 
@@ -531,5 +570,10 @@ I would like to acknowledge the following people who helped and guided me in com
 |w3 HTML Validation-Signin|![HTML Validation](ufc/static/images/testing/html-signin.png)|
 |w3 HTML Validation-Add_Champion|![HTML Validation](ufc/static/images/testing/html-add_champion.png)|
 |w3 css Validation|![css Validation](ufc/static/images/testing/css-error.png)| Error due to materialize css
-|JSHINT|![JsHint Validation](ufc/static/images/testing/jshint.png)| M is undefined as it comes defined standard with materialize 
+|JSHINT|![JsHint Validation](ufc/static/images/testing/jshint.png)| M is undefined as it comes defined standard with materialize
+|Python Syntax Checker - __init__.py|![pep-8 Validation](ufc/static/images/testing/python-init.png)|
+|Python Syntax Checker - models.py|![pep-8 Validation](ufc/static/images/testing/python-models.png)|
+|Python Syntax Checker - run.py|![pep-8 Validation](ufc/static/images/testing/python-run.png)|
+|Python Syntax Checker - routes.py|![pep-8 Validation](ufc/static/images/testing/python-routes.png)|
+
 - - -
