@@ -46,12 +46,13 @@ a:hover {
 }
 
 .custom-btn {
-    background-color: #ff0000 !important; /* Change to the desired color */
-    color: #fff !important; /* Change to the desired text color */
+    background-color: #ff0000 !important; 
+    color: #fff !important; 
 }
 
 .custom-btn:hover {
     background-color: #ff8c00 !important; 
+    color: #fff !important;
 }
 
 .brand-logo {
