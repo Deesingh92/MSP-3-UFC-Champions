@@ -467,6 +467,14 @@ Future Implementations:
 
 ## Technologies Used
 
+### Database Schema
+
+PostgreSQL manages the data for the champions categories and users.
+
+!["champions" table](ufc/static/images/champions.png)
+
+!["users" table](ufc/static/images/users.png)
+
 ### Languages Used
 
 HTML, CSS, Javascript, Python and SQL were used to create this website.
